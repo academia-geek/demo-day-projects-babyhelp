@@ -26,9 +26,7 @@ const Stay = () => {
 
 
                         <div className="">
-                        <button className="btnPrimero">Ir a App</button>
-                            {/* <Link className="link" to="/">See how Fylo works</Link><img className="iconSig" src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1649040436/landing%20Page/images/icon-arrow_euoekp.svg" width="10%"></img> */}
-                        </div>
+                        <Link to="/login" className="btnPrimero"> Ir a App</Link>                        </div>
                     </div>
                 </div>
             </div>

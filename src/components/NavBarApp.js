@@ -1,13 +1,26 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-const NavBar = () => {
+import { useDispatch } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { logoutAsync } from '../redux/actions/actionLogin';
+
+
+
+const NavBarApp = () => {
+
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    const logout = () => {
+        dispatch(logoutAsync())
+        navigate("/login")
+    }
     return (
         <>
 
             <Navbar>
                 <Container className="navb">
-                <Navbar.Brand href="#home">
+                    <Navbar.Brand href="#home">
                         <img
                             src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1650956989/ckmbzwlkjyflf4geksva.png"
                             width="50%"
@@ -18,10 +31,9 @@ const NavBar = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-0 nav">
-                        <Nav.Link><Link to="/home">Home</Link></Nav.Link>
-                        <Nav.Link><Link to="/home">Nosotros</Link></Nav.Link>
-                        <Nav.Link><Link to="/login">App</Link></Nav.Link>
-                        <Nav.Link><Link to="/home">Contacto</Link></Nav.Link>
+                            <Nav.Link><Link to="/logout">Home</Link></Nav.Link>
+                            <Nav.Link><Link to="/aprende">Aprende</Link></Nav.Link>
+                            <Nav.Link onClick={logout}>Cerrar Sesión</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -30,4 +42,4 @@ const NavBar = () => {
     )
 }
 
-export default NavBar
+export default NavBarApp
