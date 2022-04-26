@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../src/containers/App';
+import AppRouters from './routers/AppRouters';
+import { Provider } from 'react-redux';
+import { store } from './redux/store/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../src/styles/lading.css";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <AppRouters />
+  </Provider>,
   document.getElementById('root')
 );
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Comentarios from './Comentarios'
 import Cuatro from './Cuatro'
 import Email from './Email'
@@ -20,7 +21,7 @@ const Home = () => {
             <p className="pPrimero">No tienes porque preocuparte BABY-HELP fue diseñada para mujeres como tú, Dá el primer paso a conocer y aprender los conocmientos y atenciones que requiere tu bebé</p>
             <br></br>
 
-            <button className="btnPrimero"> Ir a App</button>
+            <Link to="/login" className="btnPrimero"> Ir a App</Link>
           </div>
 
           <div className="col-md-6">
