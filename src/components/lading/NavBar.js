@@ -36,9 +36,9 @@ const NavBar = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-0 nav">
                             <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#link">Link</Nav.Link>
-                            <Nav.Link href="#link">Link</Nav.Link>
-                            <Nav.Link href="#link">Link</Nav.Link>
+                            <Nav.Link href="#somos">Nosotros</Nav.Link>
+                            <Nav.Link href="#login">App</Nav.Link>
+                            <Nav.Link href="#contacto">Contacto</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

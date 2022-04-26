@@ -3,8 +3,8 @@ import { Form } from 'react-bootstrap'
 
 const Email = () => {
     return (
-        <div className="contePrincipalEmail">
-            <div className="divEmail">
+        <div className="contePrincipalEmail" id="contacto">
+            <div className="divEmail" >
                 <h3>¿Deseas comentarnos algo?</h3>
                 <br></br>
 

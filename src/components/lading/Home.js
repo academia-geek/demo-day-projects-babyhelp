@@ -10,14 +10,14 @@ const Home = () => {
     <>
       <div className="container-fluid">
 
-        <div className="row primero">
+        <div className="row primero" id="home">
 
 
           <div className="col-md-6 izq">
 
             <h3>¿Eres madre primeriza y no te sientes preparada para esta nueva etapa que estas viviendo?</h3>
             <br></br>
-            <p className="pPrimero">No tienes porque preocuparte BABY-HELP fue diseñada para mujeres como tú, Da el primer paso al conocimientos de los cuidados de tu bebé</p>
+            <p className="pPrimero">No tienes porque preocuparte BABY-HELP fue diseñada para mujeres como tú, Dá el primer paso a conocer y aprender los conocmientos y atenciones que requiere tu bebé</p>
             <br></br>
 
             <button className="btnPrimero"> Ir a App</button>
