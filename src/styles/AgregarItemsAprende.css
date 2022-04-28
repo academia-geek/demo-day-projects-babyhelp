@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.atrasAprende{
+    text-decoration: none;
+    color: rgb(223, 46, 173);
+    font-size: 1.5rem;
+}
+
+.divFormAgregarItemAprende{
+    margin: 0 auto;
+    width: 70%;
+}
+
+form{
+    width: 70%;
+}
+
+

@@ -20,6 +20,11 @@ body {
 
 }
 
+.linkDentro{
+    text-decoration: none;
+    color: black;
+}
+
 .navbar-expand {
     padding: 0 5%;
     background-color: hsl(210, 64%, 81%);
@@ -122,7 +127,6 @@ h5 {
 
 .link {
     text-decoration: none;
-    color: hsl(176, 68%, 64%);
 }
 
 
@@ -401,6 +405,12 @@ Form {
 }
 
 @media (max-width: 768px) {
+
+    .logoNavDentro{
+        width: 85%;
+    }
+
+
     .primero {
         width: 95%;
         margin-top: 10%;

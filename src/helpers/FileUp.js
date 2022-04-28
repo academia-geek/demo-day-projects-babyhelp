@@ -1,6 +1,6 @@
 export const FileUp = async (file) => {
     //la ruta de la api es la siguiente deben cambiar el nombre del usuario el mio es danimel
-    const urlCloudinary = 'https://api.cloudinary.com/v1_1/danimel/upload'
+    const urlCloudinary = 'https://api.cloudinary.com/v1_1/dhu8kck7f/upload'
 
     const formData = new FormData()
 

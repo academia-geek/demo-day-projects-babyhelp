@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.bodyNoche {
+    background-image: url('https://res.cloudinary.com/dhu8kck7f/image/upload/v1649211110/images/bg-desktop-light_npvl0u.jpg');
+    background-size: 100% 40%;
+    background-position: top;
+    background-repeat: no-repeat;
+    font-size: 18px;
+}
+
+.conteTodo {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 5%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+    font-size: 18px
+}
+
+.conteTitulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+
+}
+
+.conteTitulo p {
+    font-size: 1.5rem;
+    text-align: justify;
+
+}
+
+.control {
+    background-color: transparent;
+    border: none;
+    background-color: transparent;
+    margin-left: 9%;
+    width: 100%;
+    padding: 1.2% 0;
+
+}
+
+.control:focus {
+    outline: none;
+}
+
+.control::placeholder {
+    font-size:1.5rem
+}
+
+.contLis {
+    box-shadow: 2px 1px 50px .4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2%;
+    
+}
+
+.divList {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 00;
+    line-height: 1.5;
+    color: #014869;
+    background-color: #fff;
+    background-clip: padding-box;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.divListNoche {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgb(173, 173, 173);
+    background-color: hsl(235, 24%, 19%);
+    border-bottom: .3px solid #ced4da;
+    background-clip: padding-box;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+
+.divInputNoche {
+    display: flex;
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: hsl(235, 24%, 19%);
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.divInput {
+    display: flex;
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+
+.inputTodo {
+    margin-bottom: 5%;
+}
+
+
+.textTodo {
+    letter-spacing: 12px;
+    color: white;
+}
+.btnTODO{
+    display:flex;
+    justify-content: right;
+    border-bottom: .3px solid #ced4da;
+    margin-bottom: 2%;
+}
+
+.btnEditar{
+    margin: 0 2%;
+}
+
+.btnEliminar{
+    width: 100px;
+    border: none;
+    margin: 0 2%;
+    border-radius: 10px;
+    background-color: hsl(198, 60%, 50%)
+}
+
+
+.divListFooter {
+    width: 100%;
+    padding: 1.3rem 2rem 0 2rem;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: grey;
+    background-color: #fff;
+    border-radius: 0.25rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.divListFooterNoche {
+    width: 100%;
+    padding: 1.3rem 2rem 0 2rem;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: grey;
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 0.25rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.divListFooterMobile {
+    width: 100%;
+    padding: 1.3rem 1rem 0 1rem;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: grey;
+    background-color: #fff;
+    border-radius: 0.25rem;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+.divListFooterMobileNoche{
+    width: 100%;
+    padding: 1.3rem 1rem 0 1rem;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: grey;
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 0.25rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.cru {
+    display: flex;
+
+
+}
+
+.cruMobile {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 9%;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.25rem;
+    display: none;
+}
+
+.cruMobileNoche {
+    justify-content: space-around;
+    margin-top: 9%;
+    background-color: hsl(235, 24%, 19%);
+    padding: 1rem 2rem;
+    border-radius: 0.25rem;
+    display: none;
+}
+
+
+.Icru,
+.IcruAll {
+    margin: 0 4%;
+}
+
+
+.formCheckL {
+    color: black;
+    font-weight: 400;
+}
+
+
+.form-check-input[type=checkbox] {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 5%;
+    border-radius: 3.25em !important;
+}
+
+.form-check-input[type=checkbox] .noche {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 5%;
+    border-radius: 3.25em !important;
+    background-color: hsl(235, 24%, 19%);
+}
+
+
+.form-check-input[type=checkbox]:checked {
+    background: linear-gradient(to bottom right, rgb(255, 3, 217), rgb(69, 201, 253) ) !important
+}
+
+
+
+.foo {
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    color: grey;
+}
+
+.fooAll {
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    color: grey;
+}
+
+.foo:hover {
+    color: blue;
+}
+
+
+
+.switchSun,
+.switchMoon {
+    border: none;
+    background: transparent;
+}
+
+svg {
+    width: 2rem;
+    height: 1.5rem;
+    color: white;
+}
+
+.drag {
+    text-align: center;
+    color: rgb(173, 173, 173);
+    font-weight: 50;
+}
+
+.fooMobile {
+    display: none;
+    
+}
+.fooMobileNoche {
+    display: none;
+    
+}
+
+
+
+@media (max-width: 1200px) {
+    .conteTodo {
+        width: 55%
+    }
+}
+
+
+@media (max-width: 998px) {
+    .conteTodo {
+        width: 80%
+    }
+}
+
+@media (max-width: 768px) {
+    .fooMobile {
+        display: block;
+    }
+    .fooMobileNoche {
+        display: block;
+    }
+
+    .divListFooter {
+        display: none;
+    }
+
+    .btnTODO{
+        display:block;
+    }
+
+    .divListFooterNoche {
+        display: none;
+    }
+
+    .cruMobile {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 9%;
+        background-color: white;
+        padding: 1rem 2rem;
+        border-radius: 0.25rem;
+    }
+
+    .cruMobileNoche {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 9%;
+        background-color: hsl(235, 24%, 19%);
+        padding: 1rem 2rem;
+        border-radius: 0.25rem;
+    }
+}
+
+@media (max-width: 568px) {
+    .conteTodo {
+        width: 80%;
+    }
+
+    .divListFooter {
+        padding: 1rem;
+    }
+
+    .cru {
+        flex-direction: column;
+    }
+
+    .Icru {
+        text-align: center;
+    }
+
+    .foo {
+        text-align: center;
+        border: none;
+        background-color: transparent;
+    }
+}
+

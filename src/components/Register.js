@@ -1,91 +1,92 @@
 import React from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { useDispatch } from 'react-redux';
+import { Formik, Form, Field } from 'formik';
+import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
-import { useForm } from '../Hooks/useForm';
-import { registerAsync} from '../redux/actions/actionRegister';
+import { useDispatch } from 'react-redux';
+import { RegisterAsyncronico } from '../redux/actions/actionRegister';
+import "../styles/Registro.css"
 
-const Register = () => {
+const SignupSchema = Yup.object().shape({
+
+    nombre: Yup.string().min(2, 'El nombre es muy corto').max(50, 'el nombre excede el maximo de caracteres permitidos').required('El nombre campo es obligatorio'),
+    email: Yup.string().email('El texto ingresado debe ser de tipo pepito@gmail.com').min(5, 'Email muy corto, ingresa un email mas largo').max(50, 'El email excede el maximo de caracteres permitidos').required('El email es un campo obligatorio'),
+    pass1: Yup.string().min(5, 'contraseña muy corta').max(10, 'contraseña muy larga').required('el password es obligatorio').oneOf([Yup.ref('pass2')], 'Las Contraseñas no coinciden'),
+    pass2: Yup.string().min(5, 'contraseña muy corta').max(10, 'contraseña muy larga').required('el password es obligatorio').oneOf([Yup.ref('pass1')], 'Las Contraseñas no coinciden')
+});
+
+const Registro = () => {
+
     const dispatch = useDispatch()
-  const  [values, handleInputChange, reset]=  useForm({
-      nombre:'',
-      email: '',
-      pass1: '',
-      pass2: ''
-  })
-
-  const {nombre, email, pass1, pass2} = values
-
-  const handleSubmit = (e)=>{
-      e.preventDefault()
-      console.log(values)
-      dispatch(registerAsync(email, pass1, nombre))
-      reset()
-  }
 
     return (
-        <div>
-            <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicName">
-                    <Form.Label>Nombre</Form.Label>
-                    <Form.Control
-                        type="text"
-                        placeholder="Enter name"
-                        name="nombre"
-                        value={nombre}
-                        onChange={handleInputChange}
-                       
-                    />
-                </Form.Group>
+        <div className="container-fluid fondo">
+            <div className="logoRegistro">
+                <Link to="/lading"><img className="logoForm"
+                    src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651009439/rz0t4rwlr53svcaf9vrj.png"
+                    width="25%"
+                    alt=""
+                /></Link>
+            </div>
 
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Correo</Form.Label>
-                    <Form.Control
-                        type="email"
-                        placeholder="email"
-                        name="email"
-                        value={email}
-                        onChange={handleInputChange}
-                  
-                    />
-                </Form.Group>
+            <div className='divFormRegistro'>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Contraseña</Form.Label>
-                    <Form.Control
-                        type="password"
-                        placeholder="Password"
-                        name="pass1"
-                        value={pass1}
-                        onChange={handleInputChange}
-                       
-                  
-                    />
-                </Form.Group>
+                <Formik
+                    initialValues={{
+                        nombre: '',
+                        email: '',
+                        pass1: '',
+                        pass2: ''
+                    }}
+                    validationSchema={SignupSchema}
+                    onSubmit={values => {
+                        dispatch(RegisterAsyncronico(values.nombre, values.email, values.pass1))
+                    }}
+                >
+                    {({ errors, touched }) => (
+                        <Form className="formLogin">
+                            <center><p className="pCrear">Crear Cuenta</p></center>
+                            <br></br>
 
-                <Form.Group className="mb-3" controlId="formBasicRepitPassword">
-                    <Form.Label>Repita contraseña</Form.Label>
-                    <Form.Control
-                        type="password"
-                        placeholder="Password"
-                        name="pass2"
-                        value={pass2}
-                        onChange={handleInputChange}
-                     
-                    />
-                </Form.Group>
+                            <label> Tu nombre</label>
+                            <Field name="nombre" type="text" className="field" /* values={nombre} onChange={handleInputChange} */ />
+                            {errors.nombre && touched.nombre ? (
+                                <div>{errors.nombre}</div>
+                            ) : null}
+
+                            <label> Correo electrónico</label>
+                            <Field name="email" type="email" className="field" /* values={nombre} onChange={handleInputChange} */ />
+                            {errors.email && touched.email ? <div>{errors.email}</div> : null}
+
+                            <label> Contraseña</label>
+                            <Field name="pass1" type="password" placeholder="Como mínimo 6 caracteres" className="field" /* values={nombre} onChange={handleInputChange} */ />
+                            {errors.pass1 && touched.pass1 ? <div>{errors.pass1}</div> : null}
+
+                            <label> Vuelve a escribir la contraseña</label>
+                            <Field name="pass2" type="password" className="field" /* values={nombre} onChange={handleInputChange} */ />
+                            {errors.pass2 && touched.pass2 ? <div>{errors.pass2}</div> : null}
+
+                            <center>
+
+                                <button type="submit" className="btnRegistro">Registrame</button>
+
+                                <br></br><br></br>
+
+                                <p className="yatienes">¿Ya tienes una cuenta? <Link to="/login" className="linkRegistro"> Iniciar sesión </Link></p>
+
+                            </center>
+
+                            <br></br>
+                            
+
+                        </Form>
 
 
-                <Button variant="primary" type="submit">
-                    Registrarse
-                </Button>
-
-                <Link to="/">Login</Link>
-
-            </Form>
-
+                    )}
+                </Formik>
+            </div>
         </div>
-    );
-};
 
-export default Register;
+    )
+}
+
+export default Registro

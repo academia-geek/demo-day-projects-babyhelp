@@ -8,7 +8,6 @@ import PublicRouters from '../routers/PublicRouters'
 import DashboardRoute from '../routers/DashboardRoute'
 import Register from '../components/Register';
 import '../styles/appRoutes.css'
-import NavBar from '../components/lading/NavBar';
 
 
 const AppRouters = () => {
@@ -40,7 +39,6 @@ const AppRouters = () => {
 
     return (
         <BrowserRouter>
-        <NavBar/>
             <Routes>
 
                 <Route path="/login" element={

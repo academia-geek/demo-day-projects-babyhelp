@@ -1,28 +1,35 @@
+
 import { createUserWithEmailAndPassword, getAuth, updateProfile } from "firebase/auth"
 import { typesRegister } from "../types/types"
 
-export const registerAsync =(email, pass, name)=>{
-    return(dispatch)=>{
-            const auth = getAuth()
-            createUserWithEmailAndPassword(auth, email, pass)
-            .then(async({user})=>{
+
+export const RegisterAsyncronico = (nombre, correo, password) => {
+    return (dispatch) => {
+        const auth = getAuth()
+        createUserWithEmailAndPassword(auth, correo, password)
+            .then(async({ user }) => {
                 console.log(user)
-                await updateProfile(auth.currentUser, {displayName: name})
-                dispatch(registerSync(email, pass, name))
-                console.log('Usuario agregado')
-        })
-        .catch(error=>{
-            console.warn(error, 'No autorizado')
-        })
+                await updateProfile(auth.currentUser, {displayName: nombre})
+                dispatch(RegisterSincronico(nombre, correo, password ))
+                console.log('Usuario Agregado')
+
+            })
+
+            .catch(error => {
+                console.warn(error, 'No autorizado')
+            })
     }
-   
 }
 
-export const registerSync =(email, pass, name)=>{
-    return{
+
+export const RegisterSincronico = (nombre, correo, password) => {
+    return {
         type: typesRegister.register,
         payload: {
-            email, pass, name
+            nombre,
+            correo,
+            password
         }
     }
+
 }

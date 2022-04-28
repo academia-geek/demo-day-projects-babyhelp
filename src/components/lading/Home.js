@@ -4,11 +4,13 @@ import Comentarios from './Comentarios'
 import Cuatro from './Cuatro'
 import Email from './Email'
 import Footer from './Footer'
+import NavBar from './NavBar'
 import Stay from './Stay'
 
 const Home = () => {
   return (
     <>
+    <NavBar/>
       <div className="container-fluid">
 
         <div className="row primero" id="home">
