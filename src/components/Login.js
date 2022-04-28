@@ -1,82 +1,126 @@
-import React from 'react';
-import { Button, Container, Form } from 'react-bootstrap';
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { useForm } from '../Hooks/useForm';
-import { loginEmailPassAsync, loginGoogle} from '../redux/actions/actionLogin';
+import React from "react";
+import { Formik, Form, Field } from "formik";
+import * as Yup from "yup";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { loginEmailPassAsync,  loginGoogle, loginFaceboook} from "../redux/actions/actionLogin";
+import "../styles/Login.css"
+
+const SignupSchema = Yup.object().shape({
+    email: Yup.string()
+        .email("El texto ingresado debe ser de tipo pepito@gmail.com")
+        .min(5, "Email muy corto, ingresa un email mas largo")
+        .max(50, "El email excede el maximo de caracteres permitidos")
+        .required("El campo email es requerido"),
+    password: Yup.string()
+        .min(5, "contraseña muy corta")
+        .max(10, "contraseña muy larga")
+        .required("El campo contraseña es requerido"),
+});
 
 const Login = () => {
+    const dispatch = useDispatch();
 
-    const dispatch = useDispatch()
-    const  [values, handleInputChange, reset]=  useForm({
-         email: '',
-         password: '',
-      
-    })
-  
-    const {email, password} = values
-  
-    const handleSubmit = (e)=>{
-        e.preventDefault()
-        console.log(values)
-         dispatch(loginEmailPassAsync(email, password))
-        reset()
-    }
-  
-const handleGoogle =()=>{
-    dispatch(loginGoogle())
-}
+    const handleLoginGoogle = () => {
+        dispatch(loginGoogle());
+    };
+
+    const handleLoginFacebook = () => {
+        dispatch(loginFaceboook());
+    };
 
     return (
-        <div>
-             <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Correo</Form.Label>
-                <Form.Control
-                    type="email"
-                    placeholder="Enter email"
-                    name="email"
-                    value={email}
-                    onChange={handleInputChange}
-              
-                  />
-            </Form.Group>
+        <div className="container-fluid fondo">
+            <div className="logoLogin">
+                <Link to="/lading"><img className="logoForm"
+                    src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651009439/rz0t4rwlr53svcaf9vrj.png"
+                    width="25%"
+                    alt="logo"
+                /></Link>
+            </div>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Contraseña</Form.Label>
-                <Form.Control
-                    type="password"
-                    placeholder="Password"
-                    name="password"
-                    value={password}
-                    onChange={handleInputChange}
-                
-                    />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-                Enviar
-            </Button>
-
-            <Button variant="primary" type="button" >
-                salir
-            </Button>
-
-            <Container className="auth__social-networks">
-                <Container
-                    className="google-btn"
-                    onClick={handleGoogle}
-                  
-
+            <div className="divFormLogin">
+                <Formik
+                    initialValues={{
+                        email: "",
+                        password: "",
+                    }}
+                    validationSchema={SignupSchema}
+                    onSubmit={(values) => {
+                        dispatch(loginEmailPassAsync(values.email, values.password));
+                        Form.reset();
+                    }}
                 >
-                    <Container className="google-icon-wrapper">
-                        <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
-                    </Container>
-                </Container>
-            </Container>
-            <Link to="/register">Registrarse</Link>
 
-        </Form>
+                    {({ errors, touched }) => (
+                        <Form className="formLogin">
+                            <center><p className="pIniciar">Iniciar sesión</p></center>
+
+                            <br></br>
+
+                            <label>Direccíon de correo electrónico</label>
+
+                            <Field name="email" type="email" className="field" />
+                            {errors.email && touched.email ? <div>{errors.email}</div> : null}
+
+                            <label> Contraseña</label>
+                            <Field
+                                name="password"
+                                type="password"
+                                className="field" /* values={nombre} onChange={handleInputChange} */
+                            />
+                            {errors.password && touched.password ? (
+                                <div>{errors.password}</div>
+                            ) : null}
+
+                            <center>
+                                <button type="submit" className="btnLogin">
+                                    Ingresar
+                                </button>
+                            </center>
+
+                            <div className="btnsAuth">
+
+                                <div className="divGoogle" onClick={() => handleLoginGoogle()}>
+                                    <button type="submit" className="google-icon">
+                                        <img className="iconGoogle"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" width="10%"
+                                            alt="google button"
+                                        />
+                                        Ingresar con Google
+                                    </button>
+                                </div>
+
+                                <div className="divFacebook" onClick={() => handleLoginFacebook()}>
+                                    <button type="submit" className="google-icon">
+                                        <img className="iconGoogle"
+                                            src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651013567/kvb6soktdnxk0ndq1tti.png" width="10%"
+                                            alt="google button"
+                                        />
+                                        Ingresar con Facebook
+                                    </button>
+                                </div>
+
+                            </div>
+
+                        </Form>
+                    )}
+                </Formik>
+
+                <br></br><br></br>
+
+                <center>
+
+                    <p className="notiene">¿No tienes una cuenta? <Link className="link" to="/register">Crear tu cuenta
+                    </Link></p>
+                </center>
+
+                <br></br>
+                <br></br>
+
+            </div>
         </div>
+
     );
 };
 
