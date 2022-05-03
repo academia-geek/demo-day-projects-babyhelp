@@ -1,24 +1,44 @@
 import React from 'react'
+import { useEffect } from 'react'
+import { Card, Carousel } from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { listAprendeAsyn } from '../redux/actions/actionAcciones'
+import '../styles/cardsLink.css'
 
 const CardsAprende = () => {
-  return (
-    <>
-      <div>
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-      </div>
+  const dispatch = useDispatch()
 
-      
-    </>
+  useEffect(() => {
+    dispatch(listAprendeAsyn())
+  }, [])
+
+  const { aprende } = useSelector(store => store.aprende);
+
+  console.log(aprende);
+
+  const handleClick = () => {
+    console.log('hola');
+  }
+
+
+  return (
+    <div className="conrainer-fluid conteCarru">
+      {
+        aprende.map(i => (
+          < Link to="/curiosidades" >
+            <Card style={{ width: '18rem', padding: 0 }}>
+              <Card.Img variant="top" src={i.foto1} height="200px"/>
+              <Card.Body>
+                <Card.Title>{i.nombre}</Card.Title>
+              </Card.Body>
+            </Card>
+          </Link>
+        ))
+        
+      }
+
+    </div >
   )
 }
 

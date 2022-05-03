@@ -1,0 +1,46 @@
+.css-19r6kue-MuiContainer-root {
+    padding-left: 44px;
+    padding-right: 44px;
+    background-color: hsl(210, 64%, 81%);
+    padding: 2%;
+    
+}
+
+.css-1083xa6-MuiTypography-root{
+    width: 50%;
+}
+
+.css-1t6c9ts {
+    justify-content: end
+}
+
+.logo {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+    font-weight: 800;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.imgLogo{
+    text-align: center;
+}
+
+.linkNav{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+}
+
+
+.linkNav:hover{
+    
+    color: white;
+}
+
+
+@media (max-width: 568px){
+    .imgLogo img{
+        width: 60%;
+    }
+}

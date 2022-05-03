@@ -15,6 +15,18 @@ body {
     margin: 0 auto;
 }
 
+.barra{
+    background-color: hsl(281, 99%, 32%);
+    height:50px;
+}
+
+.divBarraRel{
+    background-color: hsl(281, 99%, 32%);
+    padding: 1% 0 .5% 0;
+    color: white;
+    width: 40%;
+    border-radius: 50px;
+}
 .container-fluid {
     width: 90%;
 
@@ -22,19 +34,33 @@ body {
 
 .linkDentro{
     text-decoration: none;
-    color: black;
+    color: hsl(281, 99%, 32%);
+    /* color: black;
+} */
+}
+.linkDentro:hover{
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+    
 }
 
 .navbar-expand {
     padding: 0 5%;
-    background-color: hsl(210, 64%, 81%);
+    /* background-color: hsl(210, 64%, 81%); */
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 1.5rem;
 
 }
+
+.navbar-light .navbar-nav .nav-link:hover{
+    text-decoration: none;
+    color: hsl(281, 99%, 32%);
+    
+}
+
 
 .navbar-collapse {
     flex-grow: 0 !important;
@@ -197,46 +223,48 @@ footer {
     margin-top: 15%;
     padding: 8% 5% 5% 5%;
     color: black;
+    font-size: 1.5rem;
 }
 
 .conteFooter {
     display: flex;
     margin: 0 auto;
-    justify-content: space-evenly;
 }
 
 
 .colFooterUno {
     display: flex;
     justify-content: center;
-    width: 30%
+    /* width: 30% */
+}
+
+.colFooterUno p{
+    padding-left: 3%;
 }
 
 .colFooterDos {
     display: flex;
     flex-direction: column;
-    width: 20%
+    /* width: 25% */
+}
+
+.colFooterDos p{
+    padding-left: 3%;
 }
 
 
 .colFooterTres {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 15%
+    text-align: center;
+    /* width: 20% */
 }
 
-.colFooterCuatro {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 15%
-}
 
 .colFooterCinco {
     display: flex;
     justify-content: center;
-    width: 20%
+    /* width: 20% */
 }
 
 .colFoote {
@@ -318,12 +346,29 @@ Form {
 }
 
 .icon {
+    display: flex;
+    align-items: center;
     border-radius: 50px;
     border: 1px solid white;
     margin: 5%;
-    height: 20%;
-    width: 15%;
+    width: 140%;
+    height: 35%;
     text-align: center;
+    justify-content: center;
+}
+
+
+.icon:hover{
+    background-color: black;
+}
+
+.linkFOO{
+    color: black;
+    text-decoration: none;
+}
+
+.linkFOO:hover{
+    color: rgb(255, 255, 255);
 }
 
 @media (max-width: 1200px) {
@@ -343,21 +388,13 @@ Form {
         padding-top: 10%;
     }
 
-    .colFooterTres,
-    .colFooterCuatro {
-        width: 15%
-    }
-
-    .colFooterDos {
-        width: 20%;
-    }
 
     .icon {
         border-radius: 50px;
         border: 1px solid white;
         margin: 5%;
-        height: 20%;
-        width: 20%;
+        height: 30%;
+        width: 100%;
         text-align: center;
     }
 
@@ -380,28 +417,31 @@ Form {
         padding-top: 10%;
     }
 
-    .colFooterTres,
-    .colFooterCuatro {
-        width: 15%
-    }
-
-    .colFooterDos {
-        width: 20%;
-    }
-
     .imgCuatro {
         width: 30%
     }
 
     .icon {
+        display: flex; 
+        flex-direction: column;
         border-radius: 50px;
         border: 1px solid white;
         margin: 5%;
-        height: 18%;
-        width: 22%;
+        height: 20%;
+        width: 100%;
         text-align: center;
     }
 
+    /* svg{
+        width: 7rem;
+        height:1.8rem;
+    } */
+
+    .imgLogoFooter{
+        width: 30%;
+    }
+
+    
 }
 
 @media (max-width: 768px) {
@@ -446,6 +486,7 @@ Form {
 
     .imgFoo {
         width: 12%;
+        height: 60%;
         padding-left: 0;
         padding-right: 5%;
     }
@@ -462,19 +503,26 @@ Form {
     }
 
     .colFooterUno,
-    .colFooterTres,
-    .colFooterCuatro,
+    .colFooterDos,
     .colFooterCinco {
-        width: 80%;
+        width: 100%;
         padding-bottom: 10%;
     }
 
-
-    .colFooterDos {
-        width: 80%;
+    .colFooterTres{
+        width: 90%;
         padding-bottom: 10%;
+        text-align: start;
+        padding-left: 14%;
 
     }
+
+    .colFooterCinco{
+        
+        justify-content: center;
+
+    }
+
 
     .colFoote {
         justify-content: left;
@@ -484,7 +532,8 @@ Form {
     .contetrooter {
         margin: 0 auto;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        font-size: 1.2rem;
     }
 
     .mb-3 {
@@ -506,12 +555,28 @@ Form {
     }
 
     .icon {
-        border-radius: 50px;
-        border: 1px solid white;
+        display: flex;
+        border-radius: 70px;
+        border: 2px solid white;
         margin: 5%;
-        height: 60%;
-        width: 10%;
+        height: 100%;
+        width: 50%;
+        justify-content:center;
+        align-items: center;
+        font-size: 1em;
         text-align: center;
+    }
+
+    svg{
+        height:2.5rem;
+    }
+    .divImgFooter{
+        
+        text-align: center;
+    }
+
+    .imgLogoFooter{
+        width: 50%;
     }
 
 
@@ -538,7 +603,13 @@ Form {
 
     footer {
         margin-top: 35%;
-        padding-top: 80%;
+        padding-top: 50%;;
+    }
+    .imgFoo {
+        width: 13%;
+        height: 60%;
+        padding-left: 0;
+        padding-right: 5%;
     }
 
     .imgCuatro {
@@ -547,13 +618,48 @@ Form {
     }
 
     .icon {
+        display: flex;
         border-radius: 50px;
         border: 1px solid white;
         margin: 5%;
-        height: 60%;
-        width: 12%;
+        height: 100%;
+        width: 50%;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .contetrooter {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .divImgFooter{
+        
         text-align: center;
     }
 
+    .imgLogoFooter{
+        width: 60%;
+    }
+
+    svg{
+        height:2.5rem;
+        text-align: center;
+    }
+
+    .ubi{
+        width: 12%;
+        height:30%;
+    }
+
+    .colFooterCinco{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+    }
 
 }

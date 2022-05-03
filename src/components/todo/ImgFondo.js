@@ -90,53 +90,57 @@ const ImgFondo = () => {
 
                 </div>
 
-                <div className="inputTodo">
+                <div className="divTareas">
 
-                    <Form onSubmit={handleSubmit}>
-                        <div className='divInput'>
-                            <input className="control"
-                                size="md"
-                                type="text"
-                                placeholder="Crear una nueva tarea..."
-                                name='tarea'
-                                onChange={handleInputChange}
-                                value={tarea} />
-                        </div>
-                    </Form>
+                    <div className="inputTodo">
+
+                        <Form onSubmit={handleSubmit}>
+                            <div className='divInput'>
+                                <input className="control"
+                                    size="md"
+                                    type="text"
+                                    placeholder="Crear una nueva tarea..."
+                                    name='tarea'
+                                    onChange={handleInputChange}
+                                    value={tarea} />
+                            </div>
+                        </Form>
+                    </div>
+                    <div className="contLis">
+                        {
+                            todo.map(tarea =>
+                            (
+                                <>
+                                    <div className='divList' key={tarea.id}>
+                                        <Form.Check className="formCheckL"
+                                            type="checkbox"
+                                            aria-label="radio 1"
+                                            id={tarea.id}
+                                            label={tarea.tarea}
+                                            value={tarea.active}
+                                            name='active'
+                                            checked
+
+                                        />
+                                        <div className="divList btnTODO">
+                                            <Button variant="secondary" className="btnEditar" onClick={() => editar(tarea.id)}>Editar</Button>
+                                            <Button variant="danger" onClick={() => handleEliminar(tarea.id)}>Eliminar</Button>
+                                        </div>
+
+                                    </div>
+
+                                </>
+                            ))
+                        }
+
+                        <br></br>
+                    </div>
                 </div>
-                <div className="contLis">
-                    {
-                        todo.map(tarea =>
-                        (
-                            <>
-                                <div className='divList' key={tarea.id}>
-                                    <Form.Check className="formCheckL"
-                                        type="checkbox"
-                                        aria-label="radio 1"
-                                        id={tarea.id}
-                                        label={tarea.tarea}
-                                        value={tarea.active}
-                                        name='active'
-                                        checked
+                {
 
-                                    />
-
-                                </div>
-                                <div className="divList btnTODO">
-                                    <Button variant="secondary" className="btnEditar" onClick={() => editar(tarea.id)}>Editar</Button>
-                                    <Button variant="danger" onClick={() => handleEliminar(tarea.id)}>Eliminar</Button>
-                                </div>
-                            </>
-                        ))
-                    }
-
-                    <br></br>
-                </div>
+                    modal === true ? <Editar modal={enviarDatosModal} setModal={setModal} /> : ''
+                }
             </div>
-            {
-
-                modal === true ? <Editar modal={enviarDatosModal} setModal={setModal} /> : ''
-            }
         </div>
     )
 }

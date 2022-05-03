@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.homePrincipal{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.imgHome{
+    background-image: linear-gradient(rgba(36, 36, 36, 0.75), rgba(37, 37, 37, 0.75)),
+    url('https://www.podoactiva.com/wp-content/uploads/imagenes/cosquillas_bebes_pies_2.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgHome p{
+    width: 65%;
+    font-size:2rem;
+    text-align: center;
+    color: white;
+    letter-spacing: 6px;
+}
+
+.carousel {
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+    color: black;
+    
+
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    opacity: .9;
+}
+
+.carousel-caption {
+    color: black !important;
+}
+
+.col3{
+    padding-left: 4%;
+}
+
+.imgCarousel{
+    height: 450px;
+    border-radius: 15px;
+    
+}
+
+.textoHome{
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+
+
+@media (max-width: 768px){
+    .carousel {
+        width: 90%;
+        position: relative;
+        margin: 0 auto;
+        color: black;;
+    
+    }
+}
