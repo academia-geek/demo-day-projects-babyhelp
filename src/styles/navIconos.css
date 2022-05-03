@@ -1,0 +1,17 @@
+.navIconos {
+    background-color: #1976d2;
+    justify-content: space-between;
+}
+.css-heg063-MuiTabs-flexContainer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .imgLogo{
+        text-align: center;
+    }
+}

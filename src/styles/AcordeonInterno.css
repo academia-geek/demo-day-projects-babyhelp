@@ -1,0 +1,46 @@
+.divInternoAcordeon{
+    padding: 1% 3%;
+    display: flex;
+    justify-content: space-between;
+}
+.imgAcordeon{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.imgAcordeon img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.descripcionAcordeon{
+    width: 100%;
+    padding: 1% 3%;
+}
+
+.accordion-header {
+    padding: 1%;
+    
+}
+.accordion-button {
+    color: rgb(0, 71, 159) !important;
+    font-size: .7em !important;
+    
+}
+
+.btnAcordeon{
+    text-decoration: none !important;
+    padding: 1.5% 3%;
+    background-color: hsl(281, 99%, 32%);
+    color: white;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.divLinkMore{
+    display: flex;
+    justify-content: end;
+}
+  

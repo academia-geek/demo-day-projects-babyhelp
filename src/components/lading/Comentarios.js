@@ -7,10 +7,6 @@ const Comentarios = () => {
 
             <br></br>
             <div className="contenedorComenatiros">
-
-                <img className="comillas" src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1649040434/landing%20Page/images/bg-quotes_qrcs4i.png" width="6%" />
-
-
                 <br></br>
                 <br></br>
                 <div className="row cardComentarios">
