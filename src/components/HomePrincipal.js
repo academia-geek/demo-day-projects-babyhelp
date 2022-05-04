@@ -1,11 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Carousel, Col, Row } from 'react-bootstrap'
 import Curiosidades from './Curiosidades';
 import Comentarios from './lading/Comentarios';
 import Email from './lading/Email';
 import '../styles/Home.css'
+import { listAprendeAsyn } from '../redux/actions/actionAcciones';
+import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
+import FallbackAvatars from './FallbackAvatars';
 
 const HomePrincipal = () => {
+    const dispatch = useDispatch()
+    const [aprendes, setAprende] = useState([])
+
+
+    const { aprende } = useSelector(store => store.aprende);
+
+    useEffect(() => {
+        dispatch(listAprendeAsyn())
+        setAprende(aprende)
+    }, [])
+
+
+    console.log(aprende);
+
     return (
         <>
             <div className="imgHome">
@@ -13,8 +31,12 @@ const HomePrincipal = () => {
             </div>
 
             <div className="container-fluid homePrincipal">
+
+
                 <Row>
                     <Col sm={9}>
+                        <h2>¿Eres madre primeriza y no sabes como actuar ante ciertas situaciones?</h2>
+                        <br></br>
                         <p>
                             Sabemos que el nacimiento del primer bebé en la familia suele traer consigo alegría, ilusión y entusiasmo, es un nuevo integrante y una vida de la cual nos tenemos que hacer cargo de la mejor manera posible, tenemos expectativas que no siempre se ven cumplidas ya que se atraviesa por una etapa desconocida y de la cual no se tiene conocimientos y/o habilidades para realizar un buen trabajo, esto conlleva a un cambio importante en ritmos y estilo de vida, especialmente para la mujer.
                         </p>
@@ -134,21 +156,37 @@ const HomePrincipal = () => {
                 <br></br>
 
 
-
-                <center>
+                {/* <center>
                     <div className="divBarraRel">
                         <h2>Curiosidades</h2>
                     </div>
-                </center>
+                </center> */}
 
                 <br></br>
                 <br></br>
                 <br></br>
 
-                {/* <CardsAprende /> */}
-                <Curiosidades />
+                <Row>
+                    <Col sm={9}>
 
-                <br></br>
+                        <h2>Echale un vistazo a estos temas importantes que te pueden ayudar</h2>
+
+                        <br></br>
+                        <Curiosidades />
+                    </Col>
+
+                    <Col sm={3}>
+
+                        <div className="divH3ComentHome">
+                            <h3>Comentarios</h3>
+                        </div>
+                        <FallbackAvatars />
+                    </Col>
+                </Row>
+
+
+
+                {/* <br></br>
                 <br></br>
                 <br></br>
                 <br></br>
@@ -160,8 +198,13 @@ const HomePrincipal = () => {
                 </center>
 
                 <br></br>
+                <br></br>
+                <br></br>
 
-                <Comentarios />
+                <FallbackAvatars /> */}
+
+                <br></br>
+                <br></br>
                 <Email />
             </div>
 

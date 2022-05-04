@@ -22,11 +22,9 @@ const Curiosidades = () => {
 
     return (
         <div className="">
-            <Accordion >
-
+            <Accordion className="accordionInfo" >
                 {
                     aprende.map(o => (
-
                         <Accordion.Item eventKey={o}>
                             <Accordion.Header>{o.nombre}</Accordion.Header>
                             <Accordion.Body>
@@ -35,14 +33,12 @@ const Curiosidades = () => {
                                         <div className="imgAcordeon">
                                             <img src={o.foto1} />
                                         </div>
-
                                     </Col>
 
                                     <Col sm={7}>
                                         <div className="descripcionAcordeon">
                                             {o.descripcionGeneral}
                                         </div>
-
                                     </Col>
 
                                 </Row>

@@ -5,7 +5,7 @@
 }
 
 .homePrincipal{
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     margin-top: 5%;
 }
@@ -65,7 +65,12 @@
     text-align: justify;
 }
 
-
+.divH3ComentHome{
+    margin-left: 4%;
+    background-color: violet;
+    text-align: center;
+    padding: 2% 0;
+}
 
 @media (max-width: 768px){
     .carousel {
@@ -75,4 +80,19 @@
         color: black;;
     
     }
+
+    .divH3ComentHome{
+        margin-top: 20%;
+        
+    }
+
+    .divH3ComentHome h3{
+    font-size: .9rem;
+
+    }
+    .css-185gdzj-MuiCardHeader-root {
+        display: block !important;
+        text-align: center
+    }
+
 }

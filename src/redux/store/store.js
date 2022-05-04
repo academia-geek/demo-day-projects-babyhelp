@@ -5,6 +5,13 @@ import { loginReducers } from "../reducers/loginReducers";
 import { registerReducers } from "../reducers/registerReducers";
 import { todoReducer } from "../reducers/reducerTodo";
 import { aprendeReducers } from "../reducers/aprendeReducers";
+import { vacunasReducers } from "../reducers/vacunasReducers";
+import { comentariosReducers } from "../reducers/comentariosReducers";
+import { enfermedadesReducers } from "../reducers/enfermedadesReducers";
+import { comentariosEnfermedadesReducers } from "../reducers/comentariosEnfermedadesReducers";
+import { comentariosColicosReducers } from "../reducers/comentariosColicosReducers";
+import { comentariosVacunasReducers } from "../reducers/comentariosVacunasReducers";
+import { comentariosDesteteReducers } from "../reducers/comentariosDesteteReducers";
 
 
 
@@ -15,9 +22,15 @@ const reducers = combineReducers({
     register: registerReducers,
     acciones: accionesReducers,
     todo: todoReducer,
-    aprende:  aprendeReducers
-})
-
+    aprende: aprendeReducers,
+    vacuna: vacunasReducers,
+    comentarios: comentariosReducers,
+    enfermedades: enfermedadesReducers,
+    comentariosEnfermedades: comentariosEnfermedadesReducers,
+    comentariosColicos: comentariosColicosReducers,
+    comentariosVacunas: comentariosVacunasReducers,
+    comentariosDestete: comentariosDesteteReducers,
+});
 
 
 export const store = createStore(
