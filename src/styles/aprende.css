@@ -1,33 +1,39 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.divBtnAddAgregar{
-    text-align: end;
+.linkAprende {
+    padding: 10% !important;
+    background-color: rgb(234, 189, 243) !important;
+    color:  black !important;
+    font-weight: 600 !important;
+    font-size: 1.2em !important;
 }
 
-.divTab{
-    margin-bottom: 10%;
+.divimg {
+    width: 100%;
 }
 
+.divimg img {
+    box-shadow: 15px 15px 13px 0px rgb(186, 186, 186);
+}
 
-.btnAgregarAprende{
-    background-color: rgb(78, 113, 255);
+.divH3ComentCoVacu {
+    background-color: violet;
+    text-align: center;
+    padding: 2%;
+}
+
+.divH3ComentCoVacuText{
+    background-color: rgb(69, 120, 179);
+    text-align: center;
+    padding: 5%;
     color: black;
-    font-weight: 600;
-    font-size: 1.2rem;
-    padding: 1% 4%;
-    border-radius: 9px;
 }
 
-.btnAgregarAprende:hover{
-    background-color: rgb(249, 78, 255);
-    border: none;
-}
 
-.divCards{
-    display: flex;
-    flex-wrap: wrap;
+.css-qltblr-MuiPaper-root-MuiCard-root {
+ max-width: 100% !important;
 }

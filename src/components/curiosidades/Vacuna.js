@@ -1,56 +1,129 @@
 import React from 'react'
+import { useState } from 'react'
 import { useEffect } from 'react'
-import { Card } from 'react-bootstrap'
+import { Col, ListGroup, Row, Tab } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { listAprendeAsyn } from '../../redux/actions/actionAcciones'
-import '../../styles/cardsLink.css'
+import { listVacunasAsyn } from '../../redux/actions/actionVacunas'
+import '../../styles/aprende.css'
+import AddComentariosVacunas from '../comentarios/AddComemtariosVacunas'
 
 const Vacuna = () => {
+
     const dispatch = useDispatch()
 
+    const { vacuna } = useSelector(store => store.vacuna)
+
     useEffect(() => {
-        dispatch(listAprendeAsyn())
+        dispatch(listVacunasAsyn())
     }, [])
 
-    const { aprende } = useSelector(store => store.aprende);
-
-    console.log(aprende);
-
-    const handleClick = () => {
-        console.log('hola');
-    }
 
     return (
-        <div className="conrainer-fluid">
-            <br></br>
+        <>
             <br></br>
             <Link to="/">
                 <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651544520/babyhelp/hgq97eg6ho7ipy7zyiw3.png" width="7%" />
             </Link>
-            <div>
-                <p>
 
-                </p>
-            </div>
-            <div className="conteCarru">
-                {
-                    aprende.map(i => (
+            <div className="container-fluid aprende">
+                <div className="conteCarru">
+                    <br></br>
+                    <br></br>
+                    <Tab.Container id="list-group-tabs-example" defaultActiveKey="#Vacunas"  >
+                        <Row>
+                            <Col sm={4}>
+                            <div className="divH3ComentCoVacuText">
+                                    <h3>Vacunas</h3>
+                                </div>
+                                <ListGroup>
+                                    {
+                                        vacuna.map(item => (
+                                            <>
+                                                <ListGroup.Item action href={`#${item.nombre}`} className="linkAprende" key={item.id}>
+                                                    {item.nombre}
+                                                </ListGroup.Item>
+                                            </>
 
-                        <Card style={{ width: '18rem', padding: 0 }} className="cardInfor">
-                            <Card.Img variant="top" src={i.foto1} height="200px" />
-                            <Card.Body>
-                                <Card.Title>{i.nombre}</Card.Title>
-                            </Card.Body>
-                        </Card>
+                                        ))
+                                    }
+                                </ListGroup>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <div className="divH3ComentCoVacu">
+                                    <h3>Comentarios</h3>
+                                </div>
+                                <AddComentariosVacunas />
+                            </Col>
 
-                    ))
 
-                }
 
-            </div>
+                            <Col sm={8}>
+                                <Tab.Content>
+                                    {
+                                        vacuna.map((item, index) => (
+                                            <Tab.Pane eventKey={`#${item.nombre}`} key={item.nombre}>
+                                                <h2>{item.nombre}</h2>
+                                                <br></br>
+                                                <div className="divimg">
+                                                    <img src={item.foto} width="100%" />
+                                                </div >
+                                                <br></br>
 
-        </div >
+                                                <div className="">
+                                                    <h3>{item.nombre1}</h3>
+                                                    <br></br>
+                                                    <p>{item.descripcion1}</p>
+
+                                                    <ul>
+                                                        <li>{item.vacunas[0]}</li>
+                                                        <li>{item.vacunas[1]}</li>
+                                                        <li>{item.vacunas[2]}</li>
+                                                        <li>{item.vacunas[3]}</li>
+                                                        <li>{item.vacunas[4]}</li>
+                                                    </ul>
+                                                </div >
+                                                <br></br>
+                                                <br></br>
+
+                                                <div className="">
+                                                    <h3>{item.nombre2}</h3>
+                                                    <br></br>
+                                                    <p>{item.parrafo2}</p>
+                                                    <ul>
+                                                        <li>{item.descricion2[0]}</li>
+                                                        <li>{item.descricion2[1]}</li>
+                                                        <li>{item.descricion2[2]}</li>
+                                                        <li>{item.descricion2[3]}</li>
+                                                    </ul>
+                                                </div >
+
+                                                <br></br>
+                                                <br></br>
+
+                                                <div className="">
+                                                    <h3>{item.nonbre3}</h3>
+                                                    <br></br>
+                                                    <p>{item.parrafo3}</p>
+                                                    <ul>
+                                                        <li>{item.descricion2[0]}</li>
+                                                        <li>{item.descricion3[1]}</li>
+                                                        <li>{item.descricion3[2]}</li>
+                                                        <li>{item.descricion3[3]}</li>
+                                                    </ul>
+                                                </div >
+                                            </Tab.Pane>
+                                        ))
+                                    }
+
+                                </Tab.Content>
+                            </Col>
+                        </Row>
+                    </Tab.Container>
+                </div>
+            </div >
+        </>
     )
 }
 

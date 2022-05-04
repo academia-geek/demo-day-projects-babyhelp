@@ -17,6 +17,7 @@ const ImgFondo = () => {
     }, [])
 
     const { todo } = useSelector(store => store.todo);
+    console.log(todo)
 
 
     //-------------------agregar--------------///
@@ -29,6 +30,7 @@ const ImgFondo = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log(e.target);
 
         dispatch(addTODOAsync({
             ...formValue,

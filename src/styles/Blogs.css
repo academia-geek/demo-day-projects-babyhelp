@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.conteComen{
+    height: 70vh;
+    overflow-y: scroll;
+}
+
+.divStack{
+    width: 100%;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.css-xn6ruc>:not(style) {
+    margin: 8px;
+    width: 100ch;
+}
+
+.controlComentario{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(149, 149, 149);
+    font-size: 1.3em;
+}
+
+.controlComentario:focus{
+    outline:none;
+}
+.formComen{
+    width: 100%;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+   color:rgb(149, 149, 149)
+}
+
+
+.conteComenColicos{
+    display: flex;
+    justify-content: center;
+}
+
+.divStackdivStackColico{
+    width: 100%;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: end;
+}

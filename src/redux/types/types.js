@@ -5,6 +5,45 @@ export const typesAcciones = {
     deleteItem: 'deleteItem',
 }
 
+export const typesEnfermedades = {
+    list: 'list'
+}
+
+export const typesComentarios = {
+    addComen: 'addComen',
+    listComen: 'listComen',
+    editarComen: 'editarComen',
+    deleteComen: 'deleteComen',
+}
+
+export const typesComentariosEnfermedades = {
+    addComen: 'addComen',
+    listComen: 'listComen',
+    editarComen: 'editarComen',
+    deleteComen: 'deleteComen',
+}
+
+export const typesComentariosColicos = {
+    addComen: 'addComen',
+    listComen: 'listComen',
+    editarComen: 'editarComen',
+    deleteComen: 'deleteComen',
+}
+
+export const typesComentariosDestete = {
+    addComen: 'addComen',
+    listComen: 'listComen',
+    editarComen: 'editarComen',
+    deleteComen: 'deleteComen',
+}
+
+export const typesComentariosVacunas = {
+    addComen: 'addComen',
+    listComen: 'listComen',
+    editarComen: 'editarComen',
+    deleteComen: 'deleteComen',
+}
+
 
 export const typesLogin = {
     login: 'login',
@@ -22,3 +61,8 @@ export const types = {
     eliminar: '[TODO] eliminar',
     list: '[TODO] listar',
 }
+
+export const typesVacunas = {
+    list: 'listItem'
+}
+

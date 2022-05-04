@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.colicos{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5%;
+    text-align: justify;
+}
+
+.colicos p{
+    font-size: 1.5rem;
+}
+
+.li{
+    font-size: 1.3rem; 
+}
+
+.colicos h2{
+    color: rgb(1, 1, 249);
+}
+
+.css-qltblr-MuiPaper-root-MuiCard-root{
+    
+    margin: 2% 0;
+
+}
+
+
+.divH3ComentColi{
+    margin-left: 11%;
+    background-color: violet;
+    text-align: center;
+    padding: 2% 0;
+}
