@@ -26,9 +26,14 @@ const HomePrincipal = () => {
 
     return (
         <>
-            <div className="imgHome">
-                <p> Vive La etapa de ser Madre, de la mejor manera con BABYHELP </p>
+            {/* <div className="imgHome">
+                
+            </div> */}
+
+            <div className="banner">
+            <p> Vive La etapa de ser Madre, de la mejor manera con BABYHELP </p>
             </div>
+            
 
             <div className="container-fluid homePrincipal">
 

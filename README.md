@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# BabyHelp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicativo web, diseñado para madre primerizas y/o con bebés de 0 a 1 año de edad, con el fin de proporcionarles información que le ayude a conocer conceptos útiles para su proceso de maternidad, a su vez contiene una seccion de agenda en la cual puede crear, editar, eliminar tareas que necesite realizar en su día a día
 
-## Available Scripts
+## Herramientas de desarrollo
 
-In the project directory, you can run:
+- Para la ejución del aplicativo web se hizo uso de:
+- Para la creación de la interfaz de usuario se usó la Libreria React.
+- Como herramienta para la gestión de estado se hizo uso de Redux.
+- Framework para los diseños y estilos del aplicativo se uso Bootstrap / Material UI  / Css Puro
 
-### `npm start`
+Url de Desploegue: [BabyHelp]()
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Clonar el Proyecto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. En primer lugar ingresa al repositorio [Repositorio BabyHelp](https://github.com/academia-geek/demo-day-projects-babyhelp)
+2. en el boton verde **code** copia el enlace de la pestaña HTTPS (https://github.com/academia-geek/demo-day-projects-babyhelp.git)
+3. En la consola de tu computador ingresa el comando: 
+ - git clone https://github.com/academia-geek/demo-day-projects-babyhelp.git
+4. Cuando ya termine de clonar, ingresa a la carpeta que se creo llamada **demo-day-projects-babyhelp**
+5. Si no tienes Descargado VISUAL STUDIO CODE. Puedes ingresar a [Descargar Visual Studio Code](https://code.visualstudio.com/download)  para descargarlo
+6. Abre en visual estudio code la carpeta creada **demo-day-projects-babyhelp**
 
-### `npm test`
+7. Si no tienes el entorno de ejecución necesario de JavaScript Node.js puedes descargarlo aqui : [Descargar Node.js](https://nodejs.org/es/download/)
+8. Al tener ya abierto la carpeta del proyecto babyhelp en tu editor de texto **Visual studio Code** Abre un nueva terminal y ejecuta el comando de instalacion de dependencias:
+ - **npm install**
+9. Luego de instalarse todas las dependencias, Ejecuta el comando: 
+ -  **npm run start** para correr el proyecto en local
+10. Se te abrirá una pagina en tu navegador predeterminado con la url (http://localhost:3000) en la cual se evidencia el proyecto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+11. Puedes loguearte mediante Facebook, Google o con un correo y una contraseña **Si ya eres usuario**
+12. Si **NO te has registrado** podrás hacerlo e ingresarás a disfrutar del aplicativo web.
