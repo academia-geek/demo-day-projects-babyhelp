@@ -11,18 +11,13 @@ import FallbackAvatars from './FallbackAvatars';
 
 const HomePrincipal = () => {
     const dispatch = useDispatch()
-    const [aprendes, setAprende] = useState([])
-
-
-    const { aprende } = useSelector(store => store.aprende);
 
     useEffect(() => {
         dispatch(listAprendeAsyn())
-        setAprende(aprende)
     }, [])
 
 
-    console.log(aprende);
+    // console.log(aprende);
 
     return (
         <>

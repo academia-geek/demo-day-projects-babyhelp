@@ -10,13 +10,17 @@ import AddComentariosVacunas from '../comentarios/AddComemtariosVacunas'
 
 const Vacuna = () => {
 
-    const dispatch = useDispatch()
 
     const { vacuna } = useSelector(store => store.vacuna)
+
+    const dispatch = useDispatch()
 
     useEffect(() => {
         dispatch(listVacunasAsyn())
     }, [])
+
+
+    console.log(vacuna);
 
 
     return (
@@ -33,15 +37,15 @@ const Vacuna = () => {
                     <Tab.Container id="list-group-tabs-example" defaultActiveKey="#Vacunas"  >
                         <Row>
                             <Col sm={4}>
-                            <div className="divH3ComentCoVacuText">
+                                <div className="divH3ComentCoVacuText">
                                     <h3>Vacunas</h3>
                                 </div>
                                 <ListGroup>
                                     {
-                                        vacuna.map(item => (
+                                        vacuna?.map(item => (
                                             <>
-                                                <ListGroup.Item action href={`#${item.nombre}`} className="linkAprende" key={item.id}>
-                                                    {item.nombre}
+                                                <ListGroup.Item action href={`#${item?.nombre}`} className="linkAprende" key={item?.id}>
+                                                    {item?.nombre}
                                                 </ListGroup.Item>
                                             </>
 
@@ -62,57 +66,67 @@ const Vacuna = () => {
                             <Col sm={8}>
                                 <Tab.Content>
                                     {
-                                        vacuna.map((item, index) => (
-                                            <Tab.Pane eventKey={`#${item.nombre}`} key={item.nombre}>
-                                                <h2>{item.nombre}</h2>
+                                        vacuna?.map((item, index) => (
+                                            <Tab.Pane eventKey={`#${item?.nombre}`} key={item?.nombre}>
+                                                <h2>{item?.nombre}</h2>
                                                 <br></br>
                                                 <div className="divimg">
-                                                    <img src={item.foto} width="100%" />
+                                                    <img src={item?.foto} width="100%" />
                                                 </div >
                                                 <br></br>
 
                                                 <div className="">
-                                                    <h3>{item.nombre1}</h3>
+                                                    <h3>{item?.nombre1}</h3>
                                                     <br></br>
-                                                    <p>{item.descripcion1}</p>
+                                                    <p>{item?.descripcion1}</p>
 
                                                     <ul>
-                                                        <li>{item.vacunas[0]}</li>
-                                                        <li>{item.vacunas[1]}</li>
-                                                        <li>{item.vacunas[2]}</li>
-                                                        <li>{item.vacunas[3]}</li>
-                                                        <li>{item.vacunas[4]}</li>
+                                                        {
+                                                            (item?.vacunas).map((v, index) => (
+                                                                <li key={index}>{v}</li>
+                                                            ))
+                                                        }
+
+                                                        {/* <li>{item?.vacunas[1]}</li>
+                                                        <li>{item?.vacunas[2]}</li>
+                                                        <li>{item?.vacunas[3]}</li>
+                                                        <li>{item?.vacunas[4]}</li> */}
                                                     </ul>
                                                 </div >
                                                 <br></br>
                                                 <br></br>
 
                                                 <div className="">
-                                                    <h3>{item.nombre2}</h3>
+                                                    <h3>{item?.nombre2}</h3>
                                                     <br></br>
-                                                    <p>{item.parrafo2}</p>
+                                                    <p>{item?.parrafo2}</p>
                                                     <ul>
-                                                        <li>{item.descricion2[0]}</li>
-                                                        <li>{item.descricion2[1]}</li>
-                                                        <li>{item.descricion2[2]}</li>
-                                                        <li>{item.descricion2[3]}</li>
+                                                        {
+                                                            (item?.descripcion2).map((d, index) => (
+                                                                <li key={index}>{d}</li>
+                                                            ))
+                                                        }
+                                                        {/* <li>{item?.descricion2[0]}</li> */}
+                                                        {/* <li>{item?.descricion2[1]}</li>
+                                                        <li>{item?.descricion2[2]}</li>
+                                                        <li>{item?.descricion2[3]}</li> */}
                                                     </ul>
                                                 </div >
 
                                                 <br></br>
                                                 <br></br>
 
-                                                <div className="">
-                                                    <h3>{item.nonbre3}</h3>
+                                                {/* <div className="">
+                                                    <h3>{item?.nonbre3}</h3>
                                                     <br></br>
-                                                    <p>{item.parrafo3}</p>
+                                                    <p>{item?.parrafo3}</p>
                                                     <ul>
-                                                        <li>{item.descricion2[0]}</li>
-                                                        <li>{item.descricion3[1]}</li>
-                                                        <li>{item.descricion3[2]}</li>
-                                                        <li>{item.descricion3[3]}</li>
+                                                        <li>{item?.descricion2[0]}</li>
+                                                        <li>{item?.descricion3[1]}</li>
+                                                        <li>{item?.descricion3[2]}</li>
+                                                        <li>{item?.descricion3[3]}</li>
                                                     </ul>
-                                                </div >
+                                                </div > */}
                                             </Tab.Pane>
                                         ))
                                     }
