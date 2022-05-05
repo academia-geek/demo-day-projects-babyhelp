@@ -1,0 +1,65 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.conteplayer{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-top: 2%;
+}
+
+.btnskip{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgb(27, 27, 27);
+    font-size: 2rem;
+}
+
+.btnplay{
+    display: flex;
+    margin: 0 30px;
+    padding: 22px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), -4px -4px 10px rgba(255, 255, 255, 0.4), inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 4px 4px 10px rgba(255, 255, 255, 0.4);
+    border: none;
+    outline: none;
+    background-color: #30beff;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.player{
+    text-align: center;
+    padding: 4% 13%;
+    background-color: rgb(177, 175, 175);
+    border-radius: 20px;
+    box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.8), inset 6px 6px 12px rgba(255, 255, 255, 0.4);
+
+}
+
+.player img{
+    border-radius:  50%;
+    width: 60%;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8), -6px -6px 12px rgba(255, 255, 255, 0.4);
+}
+
+.detalles-title,  .detalles-artist, .textInicialAudio{
+    color: #EEE;
+    font-size: 1.6rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(255,255,255,0.4);
+}
+
+.player-controles{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}

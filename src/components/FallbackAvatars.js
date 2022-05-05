@@ -16,7 +16,7 @@ export default function FallbackAvatars() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log(e.target);
+        // console.log(e.target);
 
         dispatch(addcomentariosAsync({
             ...formValue,
@@ -30,7 +30,7 @@ export default function FallbackAvatars() {
 
     let date = new Date();
     let output = String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0') + '/' + date.getFullYear();
-    console.log(output);
+    // console.log(output);
 
     //-------------------agregar--------------///
 

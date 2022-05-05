@@ -221,12 +221,6 @@
     background: transparent;
 }
 
-svg {
-    width: 2rem;
-    height: 1.5rem;
-    color: white;
-}
-
 .drag {
     text-align: center;
     color: rgb(173, 173, 173);

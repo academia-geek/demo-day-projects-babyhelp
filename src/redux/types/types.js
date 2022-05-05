@@ -63,6 +63,6 @@ export const types = {
 }
 
 export const typesVacunas = {
-    list: 'listItem'
+    list: 'listVacuna'
 }
 

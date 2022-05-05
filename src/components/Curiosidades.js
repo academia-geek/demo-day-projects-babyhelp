@@ -4,6 +4,7 @@ import { Accordion, Button, Col, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { listAprendeAsyn } from '../redux/actions/actionAcciones';
+import { listVacunasAsyn } from '../redux/actions/actionVacunas';
 import '../styles/AcordeonInterno.css'
 
 const Curiosidades = () => {
