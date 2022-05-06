@@ -4,13 +4,24 @@ import { GiNextButton, GiPreviousButton } from 'react-icons/gi';
 import '../../src/styles/player.css'
 
 const PlaterControls = (props) => {
+    console.log(props);
     return (
-        <div className="player-controles">
+        <div className="">
+            <div>
+                <br></br>
+                <center>
+                    <p className="detalles-title">{props.song.title}</p>
+                </center>
+            </div>
 
-            <button className="btnskip"onClick={() => props.SkipSong(false)}><GiPreviousButton /></button>
-            <button className="btnplay" onClick={()=> props.setIsPlaying(!props.isPlaying)}><FaPlay /></button>
-            {/* <button className="btn skip-btn"><FaPause /></button> */}
-            <button className="btnskip" onClick={() => props.SkipSong()}><GiNextButton /></button>
+
+
+            <div className="player-controles">
+                <button className="btnskip" onClick={() => props.SkipSong(false)}><GiPreviousButton /></button>
+                <button className="btnplay" onClick={() => props.setIsPlaying(!props.isPlaying)}>{props.isPlaying ? <FaPause /> : <FaPlay />}</button>
+                {/* <button className="btn skip-btn"><FaPause /></button> */}
+                <button className="btnskip" onClick={() => props.SkipSong()}><GiNextButton /></button>
+            </div>
         </div>
     )
 }

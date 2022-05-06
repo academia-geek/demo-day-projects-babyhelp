@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import PlayerDetalles from './PlayerDetalles'
 import PlaterControls from './PlaterControls'
+import { Col, Row } from 'react-bootstrap';
 
 const Player = (props) => {
     const audioEl = useRef(null);
@@ -25,8 +26,8 @@ const Player = (props) => {
                 }
 
                 return temp;
-            })
-        } else {
+            });
+        } else if (forwards == false) {
             props.setCurrentSongIndex(() => {
                 let temp = props.currentSongIndex;
                 temp--;
@@ -36,23 +37,29 @@ const Player = (props) => {
                 }
 
                 return temp;
-            })
+            });
+        } else {
+            props.setCurrentSongIndex(() => {
+                let temp = props.currentSongIndex;
 
+                return temp;
+
+            });
         }
     }
 
     return (
         <div className="Container-fluid conteplayer">
             <div className="player">
-            <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
-                <h4 className="textInicialAudio">Nuevo Audio</h4>
-                <br></br>
-                <PlayerDetalles song={props.songs[props.currentSongIndex]} />
-                <br></br>
-                <PlaterControls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong}/>
-                <br></br>
+                <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
 
-                <p><strong>Siguiente</strong>{props.songs[props.nextSongIndex].title} by  {props.songs[props.nextSongIndex].artist}</p>
+                <div className="conteDivImgControl">
+                    <PlayerDetalles song={props.songs[props.currentSongIndex]} />
+                    <PlaterControls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} song={props.songs[props.currentSongIndex]} />
+                </div>
+
+                <br></br>
+                <h5 className="detalles-title">Siguiente Canción: {props.songs[props.nextSongIndex].title}</h5>
 
             </div>
         </div>
