@@ -8,6 +8,7 @@ import { listAprendeAsyn } from '../redux/actions/actionAcciones';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import FallbackAvatars from './FallbackAvatars';
+import { Link } from 'react-router-dom';
 
 const HomePrincipal = () => {
     const dispatch = useDispatch()
@@ -26,13 +27,11 @@ const HomePrincipal = () => {
             </div> */}
 
             <div className="banner">
-            <p> Vive La etapa de ser Madre, de la mejor manera con BABYHELP </p>
+                <p> Vive La etapa de ser Madre, de la mejor manera con BABYHELP </p>
             </div>
-            
+
 
             <div className="container-fluid homePrincipal">
-
-
                 <Row>
                     <Col sm={9}>
                         <h2>¿Eres madre primeriza y no sabes como actuar ante ciertas situaciones?</h2>
@@ -41,88 +40,68 @@ const HomePrincipal = () => {
                             Sabemos que el nacimiento del primer bebé en la familia suele traer consigo alegría, ilusión y entusiasmo, es un nuevo integrante y una vida de la cual nos tenemos que hacer cargo de la mejor manera posible, tenemos expectativas que no siempre se ven cumplidas ya que se atraviesa por una etapa desconocida y de la cual no se tiene conocimientos y/o habilidades para realizar un buen trabajo, esto conlleva a un cambio importante en ritmos y estilo de vida, especialmente para la mujer.
                         </p>
 
-                        <br></br>
-                        <Carousel>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100 imgCarousel"
-                                    src="http://www.embarazoymas.net/wp-content/uploads/2012/04/dreamstime_s_22648765-1200x900.jpg"
-                                    alt="First slide"
-                                />
-                                <Carousel.Caption>
-                                    <h3>uno</h3>
-                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100 imgCarousel"
-                                    src="https://www.conmishijos.com/assets/posts/11000/11455-nombres-felices.jpg"
-                                    alt="Second slide"
-                                />
-                                <Carousel.Caption>
-                                    <h3>Second </h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100 imgCarousel"
-                                    src="https://bbmundo.com/wp-content/uploads/2021/12/las-primeras-enfermedades-de-los-bebes.jpeg"
-                                    alt="Third slide"
-                                />
-                                <Carousel.Caption>
-                                    <h3>Tres</h3>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
 
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100 imgCarousel"
-                                    src=" https://imagenes.elpais.com/resizer/J7dWdkZy7sKaVZl0kih14_fyaWw=/1960x1103/cloudfront-eu-central-1.images.arcpublishing.com/prisa/VYV6NISAMG6CXPCOEYXKQY7L7E.jpg"
-                                    alt="Third slide"
-                                />
-                                <Carousel.Caption>
-                                    <h3>4</h3>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
+                        <p>
+                            Aquí podrás encontrar consejos en diferentes áreas, como (enfermedades comunes, cólicos en bebes, baño, alimentación…) entre otra información que harán estos primeros meses un poco más fáciles, a su vez cuenta con una sección de ‘tareas’ la cual te puede servir de agenda virtual y te permitirá, crear, editar y eliminar tareas, con el fin de que tengas una buena organización en tu día a día.
 
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100 imgCarousel"
-                                    src="https://empresa.nestle.es/sites/g/files/pydnoa431/files/asset-library/publishingimages/sobre-nestle/te-interesa-saber/lactancia1.jpg"
-                                    alt="Third slide"
-                                />
-                                <Carousel.Caption>
-                                    <h3>5</h3>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100 imgCarousel"
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsx0R80jgyFlZdPTeW2VwptPHs0I4TPdAQ8w&usqp=CAU"
-                                    alt="Third slide"
-                                />
-                                <Carousel.Caption>
-                                    <h3>6</h3>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                        </Carousel>
+                        </p>
 
                         <br></br>
+                        <br></br>
 
-                        <div className="textoHome">
-                            <p>
+                        <div className="contImgMeses" id="inicio">
+
+                            <Link to="/aprendemas" className="aImgMeses">
+                                <div>
+                                    <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651809430/xwtlruqusuirbf0fftda.png" width="40%" />
+                                </div>
                                 <br></br>
-                                Aquí podrás encontrar consejos en diferentes áreas, como (enfermedades comunes, cólicos en bebes, baño, alimentación…) entre otra información que harán estos primeros meses un poco más fáciles, a su vez cuenta con una sección de ‘tareas’ la cual te puede servir de agenda virtual y te permitirá, crear, editar y eliminar tareas, con el fin de que tengas una buena organización en tu día a día.
+                                <p>Consejos sobre bebés: recién nacidos</p>
+                            </Link>
 
-                            </p>
+                            <Link to="/aprendemas" className="aImgMeses">
+                                <div>
+                                    <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651809526/rwsyrxdtusisa1h7fmsy.png" width="40%" />
+                                </div>
+                                <br></br>
+                                <p>Consejos sobre bebés: de 1-6 meses</p>
+                            </Link>
+
+                            <Link to="/aprendemas" className="aImgMeses">
+                                <div>
+                                    <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651809531/vzobnniuexainco90f2m.png" width="40%" />
+                                </div>
+                                <br></br>
+                                <p>Consejos sobre bebés: de 6-9 meses</p>
+                            </Link>
+
+                            <Link to="/aprendemas" className="aImgMeses">
+                                <div>
+                                    <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651809536/qn84lahoefriyzkv0weg.png" width="40%" />
+                                </div>
+                                <br></br>
+                                <p>Consejos sobre bebés: de 9-12 meses</p>
+                            </Link>
+
+                            <Link to="/aprendemas" className="aImgMeses">
+                                <div>
+                                    <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651810562/j9kzkeoesnxxpjuunhpm.png" width="40%" />
+                                </div>
+                                <br></br>
+                                <p>Consejos sobre bebés: de 1-2 años</p>
+                            </Link>
+
+                            <Link to="/aprendemas" className="aImgMeses">
+                                <div>
+                                    <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651810565/mn2bjtiijjgqpr7helek.png" width="40%" />
+                                </div>
+                                <br></br>
+                                <p>Consejos sobre bebés: de 2+ años</p>
+                            </Link>
+
                         </div>
+
+
                     </Col>
 
                     <Col sm={3} className="col3">
@@ -152,8 +131,6 @@ const HomePrincipal = () => {
 
                 <br></br>
                 <br></br>
-                <br></br>
-                <br></br>
 
 
                 {/* <center>
@@ -166,7 +143,7 @@ const HomePrincipal = () => {
                 <br></br>
                 <br></br>
 
-                <Row>
+                <Row id='aprende'>
                     <Col sm={9}>
 
                         <h2>Echale un vistazo a estos temas importantes que te pueden ayudar</h2>

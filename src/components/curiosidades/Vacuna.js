@@ -87,10 +87,10 @@ const Vacuna = () => {
                                                             ))
                                                         }
 
-                                                        {/* <li>{item?.vacunas[1]}</li>
+                                                        {/* <li>{item?.vacunas[0]}</li>
+                                                        <li>{item?.vacunas[1]}</li>
                                                         <li>{item?.vacunas[2]}</li>
-                                                        <li>{item?.vacunas[3]}</li>
-                                                        <li>{item?.vacunas[4]}</li> */}
+                                                        <li>{item?.vacunas[3]}</li> */}
                                                     </ul>
                                                 </div >
                                                 <br></br>
@@ -102,12 +102,12 @@ const Vacuna = () => {
                                                     <p>{item?.parrafo2}</p>
                                                     <ul>
                                                         {
-                                                            (item?.descripcion2).map((d, index) => (
+                                                            (item?.descricion2).map((d, index) => (
                                                                 <li key={index}>{d}</li>
                                                             ))
                                                         }
-                                                        {/* <li>{item?.descricion2[0]}</li> */}
-                                                        {/* <li>{item?.descricion2[1]}</li>
+                                                        {/* <li>{item?.descricion2[0]}</li>
+                                                        <li>{item?.descricion2[1]}</li>
                                                         <li>{item?.descricion2[2]}</li>
                                                         <li>{item?.descricion2[3]}</li> */}
                                                     </ul>

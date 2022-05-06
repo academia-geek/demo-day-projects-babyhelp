@@ -6,6 +6,16 @@ import Swal from 'sweetalert2';
 import { Button, Form, Modal } from 'react-bootstrap';
 import { editTODOAsync } from '../redux/actions/todoActions';
 
+import { DatePicker, DateTimePicker, TimePicker } from '@material-ui/pickers'
+import { styled } from '@mui/material/styles';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
 
 const Editar = ({ modal, setModal }) => {
     const dispatch = useDispatch()
@@ -15,6 +25,8 @@ const Editar = ({ modal, setModal }) => {
         setShow(false)
         setModal(false)
     };
+
+    const [fechaSeleccionada, cambiarFechaSeleccionada] = useState(modal.Fecha);
 
     const [values, handleInputChange] = useForm({
         tarea: modal.tarea,
@@ -27,8 +39,16 @@ const Editar = ({ modal, setModal }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        //  console.log(values)
-        dispatch(editTODOAsync(id, values))
+         console.log(values)
+        dispatch(editTODOAsync(
+            id, 
+            {
+                id: id,
+                tarea: tarea,
+                active: active,
+                Fecha: fechaSeleccionada.toString(),
+            
+            }))
         Swal.fire(
             'Tarea Editada Correctamente!'
         )
@@ -49,18 +69,19 @@ const Editar = ({ modal, setModal }) => {
                     <Modal.Body>
                         <div className="inputTodo">
 
-                            <Form onSubmit={handleSubmit}>
-                                <div className='divInput'>
-                                    <input className="control"
-                                        size="md"
-                                        type="text"
-                                        placeholder="Crear una nueva tarea..."
-                                        name='tarea'
-                                        onChange={handleInputChange}
-                                        value={tarea} />
+                            <Form onSubmit={() => handleSubmit()}>
+                                <Form.Label>Nombre de la Tarea</Form.Label>
+                                <Form.Control className="forContr" type="text" name="tarea" required placeholder="Nombre de la Tarea" value={tarea} onChange={handleInputChange} />
 
-                                </div>
+                                <br></br>
+
+                                <Form.Label>Fecha y Hora</Form.Label>
+                                <br></br>
+                                <DateTimePicker value={fechaSeleccionada} onChange={cambiarFechaSeleccionada} />
+
+                  
                             </Form>
+
                         </div>
                         <center>
                             <Button variant="secondary" onClick={handleSubmit}>Guardar Tarea Editada</Button>

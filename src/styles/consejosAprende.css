@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.divContenConsejos p,
+.divContenConsejos li {
+    font-size: 1.2rem;
+}
+
+.divContenConsejos h2 {
+    text-align: center;
+    color: rgb(94, 0, 72);
+}
+
+.divConsejos {
+    width: 90%;
+    padding: 6% 8%;
+    background-color: rgb(221, 113, 113);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), -4px -4px 10px rgba(255, 255, 255, 0.4), inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 4px 4px 10px rgba(255, 255, 255, 0.4);
+    margin: 0 auto;
+    margin-top: 4%;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+
+}
+
+.imgSabiasBb {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), -4px -4px 10px rgba(255, 255, 255, 0.4), inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 4px 4px 10px rgba(255, 255, 255, 0.4);
+
+}
+
+.divPinicial {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 4%;
+    font-weight: 500;
+}
+
+.divPinicial p {
+    font-size: 1.5rem;
+}
+
+.contImgMeses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+
+.divInfoSabias h3 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.pDescripSabias{
+    text-align: center
+}
+
+.aImgMeses {
+    width: 29.6%;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.divInfoSabias {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 4%;
+}
+
+.divCurioAprende {
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+.pSabias {
+    font-size: 1.7rem !important;
+    text-align: center;
+    font-weight: 600;
+}
+.divrecien a{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.3rem;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 2% 4%;
+    border-radius: 39px;
+    margin: 0 auto;
+}

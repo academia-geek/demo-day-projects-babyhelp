@@ -1,5 +1,3 @@
-// import React from 'react';
-// import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { logoutAsync } from '../redux/actions/actionLogin';
@@ -22,8 +20,8 @@ import '../styles/Navbar.css'
 
 
 const NavBarApp = () => {
-    const pages = ['Home', 'Tareas', 'Aprende'];
-    const urls = ['/', '/tareas', '/aprende'];
+    const pages = ['Home', 'Tareas', 'Aprende', 'Entretenimiento'];
+    const urls = ['/', '/tareas', '/aprendemas', '/entretenimiento'];
 
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -114,8 +112,6 @@ const NavBarApp = () => {
                             <img
                                 src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651009439/rz0t4rwlr53svcaf9vrj.png"
                                 width="50%"
-
-
                             />
                         </Link>
                     </Typography>

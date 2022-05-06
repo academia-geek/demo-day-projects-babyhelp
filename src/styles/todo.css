@@ -14,17 +14,18 @@
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 900;
     font-size: 1rem;
-    
+
 }
 
 .conteTitulo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5%;
-    padding: 3%;
-    background-color: hsl(210, 64%, 81%);
-    border-radius: 19px;
+    margin-bottom: 3%;
+    padding: 4% 4% 3% 4%;
+    background-color: hsl(0, 0%, 74%);
+    border-radius: 10px;
+    box-shadow: 10px 7px 20px .5px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -34,28 +35,35 @@
 
 }
 
-.control {
-    background-color: transparent;
-    border: none;
-    background-color: transparent;
-    margin-left: 9%;
-    width: 100%;
-    padding: 1.2% 0;
-
+.forContr {
+    border: none ! important;
+    border-bottom: 1px solid grey ! important;
+    
 }
+
 
 .control:focus {
     outline: none;
 }
 
 .control::placeholder {
-    font-size:1.5rem
+    font-size: 1.5rem
 }
 
 .contLis {
     box-shadow: 2px 1px 50px .4px rgba(0, 0, 0, 0.2);
     margin-bottom: 2%;
+
+}
+
+.inputLabelTarea {
+    font-size: 1.3rem;
     
+}
+
+.inputLabelTareaFecha {
+    font-size: 1.3rem;
+    padding-bottom: 1%;
 }
 
 .divList {
@@ -72,45 +80,64 @@
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.divTareas{
+.divTareas {
     width: 60%;
     margin: 0 auto;
 }
 
 .divInput {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    padding: 1rem 2rem;
-    font-size: 1rem;
+    padding: 3% 5%;
     line-height: 1.5;
     color: #212529;
     background-color: #fff;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
+    margin-top: 2%;
+    box-shadow: 10px 10px 10px .5px rgba(0, 0, 0, 0.2);
 }
 
+.btnAgrgTarea {
+    display: flex;
+    align-items: center;
+}
+
+.btnAddTarea {
+    padding: 16% 9% !important;
+    background-color: grey !important;
+    border: none !important;
+}
 
 .inputTodo {
+    display: flex;
     margin-bottom: 5%;
+    padding: 2% 4%;
 }
-
 
 .textTodo {
     letter-spacing: 12px;
     color: white;
 }
-.btnTODO{
-    display:flex;
+
+.btnTODO {
+    display: flex;
     justify-content: right;
     border-bottom: .3px solid #ced4da;
     margin-bottom: 2%;
 }
 
-.btnEditar{
+.btnEditar {
     margin: 0 2%;
 }
 
-.btnEliminar{
+.td {
+    padding: 3% 5% !important;
+}
+
+
+.btnEliminar {
     width: 100px;
     border: none;
     margin: 0 2%;
@@ -133,6 +160,18 @@
     justify-content: space-between;
 }
 
+.tdico {
+    cursor: pointer;
+    padding-left: 3% !important
+}
+
+.btnIcon {
+    color: rgb(211, 38, 38);
+}
+
+.btnIconEdi {
+    color: blue;
+}
 
 .divListFooterMobile {
     width: 100%;
@@ -143,10 +182,13 @@
     color: grey;
     background-color: #fff;
     border-radius: 0.25rem;
-
     display: flex;
     justify-content: space-between;
 
+}
+
+.headTable {
+    background-color: violet;
 }
 
 
@@ -190,7 +232,7 @@
 
 
 .form-check-input[type=checkbox]:checked {
-    background: linear-gradient(to bottom right, rgb(255, 3, 217), rgb(69, 201, 253) ) !important
+    background: linear-gradient(to bottom right, rgb(255, 3, 217), rgb(69, 201, 253)) !important
 }
 
 
@@ -229,7 +271,7 @@
 
 .fooMobile {
     display: none;
-    
+
 }
 
 
@@ -258,8 +300,8 @@
         display: none;
     }
 
-    .btnTODO{
-        display:block;
+    .btnTODO {
+        display: block;
     }
 
 
@@ -298,4 +340,3 @@
         background-color: transparent;
     }
 }
-
