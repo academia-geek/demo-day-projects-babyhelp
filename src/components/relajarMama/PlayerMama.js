@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react'
-import PlayerDetalles from './PlayerDetalles'
-import PlaterControls from './PlaterControls'
+import PlayerDetalles from './PlayerDetaRelajMama'
+import PlaterControls from './PlayerContrRelajMama'
 
-const Player = (props) => {
+const PlayerMama = (props) => {
     const audioEl = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false)
 
@@ -65,4 +65,4 @@ const Player = (props) => {
     )
 }
 
-export default Player
+export default PlayerMama

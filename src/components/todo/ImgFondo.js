@@ -8,17 +8,7 @@ import uuid from 'react-uuid'
 import Swal from 'sweetalert2';
 import Editar from '../Editar';
 import '../../styles/todo.css'
-
 import { DatePicker, DateTimePicker, TimePicker } from '@material-ui/pickers'
-// import { styled } from '@mui/material/styles';
-// import Table from '@mui/material/Table';
-// import TableBody from '@mui/material/TableBody';
-// import TableCell, { tableCellClasses } from '@mui/material/TableCell';
-// import TableContainer from '@mui/material/TableContainer';
-// import TableHead from '@mui/material/TableHead';
-// import TableRow from '@mui/material/TableRow';
-// import Paper from '@mui/material/Paper';
-// import { Button, Form } from 'react-bootstrap';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 
@@ -37,33 +27,6 @@ const ImgFondo = () => {
     //------------------------------------calendario-------------------------------------------------//
 
     const [fechaSeleccionada, cambiarFechaSeleccionada] = useState(new Date());
-
-
-    //--------------------------------mostrar table--------------------------------------//
-
-
-    // const StyledTableCell = styled(TableCell)(({ theme }) => ({
-    //     [`&.${tableCellClasses.head}`]: {
-    //         backgroundColor: theme.palette.common.violet,
-    //         color: theme.palette.common.white,
-    //     },
-    //     [`&.${tableCellClasses.body}`]: {
-    //         fontSize: 18,
-    //     },
-    // }));
-
-    // const StyledTableRow = styled(TableRow)(({ theme }) => ({
-    //     '&:nth-of-type(odd)': {
-    //         backgroundColor: theme.palette.action.hover,
-    //     },
-    //     // hide last border
-    //     '&:last-child td, &:last-child th': {
-    //         border: 0,
-    //     },
-    // }));
-
-
-    //-----------------------------------------------------------------------------//
 
 
 
@@ -146,7 +109,7 @@ const ImgFondo = () => {
 
 
                 <div className="inputTodo">
-                    <Form onSubmit={() => handleSubmit()} className="formutarea">
+                    <Form onSubmit={handleSubmit} className="formutarea">
                         <Row>
                             <Col sm={5}>
                                 <div className='divInput'>

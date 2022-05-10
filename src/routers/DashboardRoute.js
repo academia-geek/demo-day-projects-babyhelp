@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import AgregarItemsAprende from '../components/AgregarItemsAprende';
-import Aprende from '../components/Aprende';
+import Entretenimiento from '../components/Entretenimiento';
 import Colicos from '../components/curiosidades/Colicos';
 import Destetar from '../components/curiosidades/Destetar';
 import HomeApp from '../components/HomeApp';
@@ -11,6 +11,12 @@ import NavBarApp from '../components/NavBarApp';
 import Vacuna from '../components/curiosidades/Vacuna';
 import Enfermedades from '../components/curiosidades/Enfermedades';
 import AprendeMas from '../components/AprendeMas';
+import EntretenimientoMamaAudio from '../components/EntretenimientoMamaAudio';
+import EntretenimientoBebe from '../components/EntretenimientoBebe';
+import EntretenerBBVideos from '../components/entretenerBebe/EntretenerBBVideos';
+import EntretenerMamaVideos from '../components/entretenerBebe/EntretenerMamaVideos';
+import QueDeboSaber from '../components/curiosidades/QueDeboSaber';
+import Lactancia from '../components/curiosidades/Lactancia';
 
 
 
@@ -21,13 +27,19 @@ const DashboardRoute = () => {
             <Routes>
                 <Route path="/" element={<HomePrincipal />} />
                 <Route path="/tareas" element={<HomeApp />} />
-                <Route path="/entretenimiento" element={<Aprende />} />
+                <Route path="/entretenimiento" element={<Entretenimiento />} />
+                <Route path="/entretenimientoMamaAudio" element={<EntretenimientoMamaAudio />} />
+                <Route path="/entretenimientoMamaVideo" element={<EntretenerMamaVideos />} />
+                <Route path="/entretenimientoBebeAudio" element={<EntretenimientoBebe />} />
+                <Route path="/entretenimientoBebeVideo" element={<EntretenerBBVideos />} />
                 <Route path="/addItemAprende" element={<AgregarItemsAprende />} />
                 <Route path="/colicos" element={<Colicos />} />
                 <Route path="/destete" element={<Destetar />} />
                 <Route path="/vacunas" element={<Vacuna />} />
                 <Route path="/enfermedades" element={<Enfermedades />} />
                 <Route path="/aprendemas" element={<AprendeMas />} />
+                <Route path="/queDeboSaber" element={<QueDeboSaber />} />
+                <Route path="/lactancia" element={<Lactancia />} />
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
             <Footer />

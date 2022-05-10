@@ -142,4 +142,13 @@
         text-align: center
     }
 
+    .banner p{
+        width: 95%;
+        font-size:1.3rem;
+    }
+
+    .banner{
+        height: 60vh;
+    }
+
 }

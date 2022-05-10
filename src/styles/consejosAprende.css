@@ -2,11 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: none;
 }
+
+
+
 
 .divContenConsejos p,
 .divContenConsejos li {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
 
 .divContenConsejos h2 {
@@ -32,11 +36,12 @@
 
 .imgSabiasBb {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), -4px -4px 10px rgba(255, 255, 255, 0.4), inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 4px 4px 10px rgba(255, 255, 255, 0.4);
-
+    width:"60%";
+    height:"350px"
 }
 
 .divPinicial {
-    width: 70%;
+    width: 75%;
     text-align: center;
     margin: 0 auto;
     margin-top: 4%;
@@ -76,13 +81,13 @@
 }
 
 .divInfoSabias {
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
     margin-top: 4%;
 }
 
 .divCurioAprende {
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
 
 }
@@ -105,4 +110,36 @@
     padding: 2% 4%;
     border-radius: 39px;
     margin: 0 auto;
+}
+
+.divrecien a:hover {
+    color: white;
+}
+
+.h3aprendemas{
+    font-size: 2.5rem !important;
+    color: blue;
+}
+
+@media (max-width: 768px){
+
+
+    .divContenConsejos p,
+.divContenConsejos li {
+    font-size: 1.2rem;
+}
+
+.divrecien a{
+    width: 80%;
+}
+
+.divContenConsejos{
+    width: 95%!important;
+}
+
+.linkatras img{
+    width: 20% 
+
+}
+
 }

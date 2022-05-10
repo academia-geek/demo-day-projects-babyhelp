@@ -52,10 +52,10 @@ export default function ListarComentariosEnfermedades() {
                         </CardContent>
                         <CardActions disableSpacing>
                             <IconButton aria-label="add to favorites">
-                                <ThumbUpIcon />
+                                <ThumbUpIcon/>
                             </IconButton>
                             <IconButton aria-label="share">
-                                <ThumbDownAltIcon />
+                                <ThumbDownAltIcon/>
                             </IconButton>
                         </CardActions>
                     </Card>

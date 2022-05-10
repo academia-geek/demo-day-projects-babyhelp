@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conteVideos{
+    margin: 0 auto;
+    margin-top: 4%;
+}
+
+.contevideo{
+     margin: 0 auto;
+}
+
+
+.video{
+    margin: 1%;
+    margin-bottom: 12%; 
+    width: 50%;
+}
+
+.listmes{
+    padding: 5%!important;
+    font-size: 1.2rem!important;
+    background-color: rgb(246, 183, 232) !important;
+}
+
+
+
+@media (max-width: 768px){
+    .tab{
+        margin-top: 10%;
+    }
+
+    .linkEntreAtras img{
+        width: 20%;
+        padding-bottom: 5%;
+    }
+}

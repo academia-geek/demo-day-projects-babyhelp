@@ -1,7 +1,5 @@
 import React from 'react'
 import { useState } from 'react';
-import { Button, Modal } from 'react-bootstrap'
-import Aprende from './Aprende';
 import ImgFondo from './todo/ImgFondo';
 
 const HomeApp = () => {

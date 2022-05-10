@@ -54,10 +54,6 @@ export default function RecipeReviewCard() {
                                 <ThumbDownAltIcon />
                             </IconButton>
 
-                            <IconButton aria-label="settings">
-                                <MoreVertIcon />
-                            </IconButton>
-
                         </CardActions>
                     </Card>
                 ))

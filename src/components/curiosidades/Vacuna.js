@@ -34,7 +34,7 @@ const Vacuna = () => {
                 <div className="conteCarru">
                     <br></br>
                     <br></br>
-                    <Tab.Container id="list-group-tabs-example" defaultActiveKey="#Vacunas"  >
+                    <Tab.Container id="list-group-tabs-example" defaultActiveKey="#Vacunas poco después del nacimiento"  >
                         <Row>
                             <Col sm={4}>
                                 <div className="divH3ComentCoVacuText">

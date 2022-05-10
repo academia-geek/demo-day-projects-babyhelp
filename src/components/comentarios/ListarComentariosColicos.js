@@ -12,6 +12,9 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { listcomentariosColicosAsyn} from '../../redux/actions/actionComentariosColicos';
+
+
+
 import '../../styles/carComentColico.css'
 
 
@@ -53,10 +56,10 @@ export default function ListarComentariosColicos() {
                         </CardContent>
                         <CardActions disableSpacing>
                             <IconButton aria-label="add to favorites">
-                                <ThumbUpIcon />
+                                <ThumbUpIcon/>
                             </IconButton>
                             <IconButton aria-label="share">
-                                <ThumbDownAltIcon />
+                                <ThumbDownAltIcon/>
                             </IconButton>
                         </CardActions>
                     </Card>

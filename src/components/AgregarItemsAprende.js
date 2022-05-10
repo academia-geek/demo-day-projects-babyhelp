@@ -111,7 +111,7 @@ const AgregarItemsAprende = () => {
     return (
         <div className="container-fluid divCont">
             <div className="">
-                <Link to="/aprende" className="atrasAprende">
+                <Link to="/entretenimiento" className="atrasAprende">
                     <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651021613/kxoh6zxnkgynbzcvlhvn.png" width="7%" />
                     <p>Atrás</p>
                 </Link>
