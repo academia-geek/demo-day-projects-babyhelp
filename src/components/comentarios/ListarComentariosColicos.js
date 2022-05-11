@@ -42,7 +42,7 @@ export default function ListarComentariosColicos() {
                             }
                             action={
                                 <IconButton aria-label="settings">
-                                    <MoreVertIcon />
+                                    {/* <MoreVertIcon /> */}
                                 </IconButton>
                             }
                             title={c.nombre}

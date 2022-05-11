@@ -1,7 +1,33 @@
 import React from 'react'
 import { Form } from 'react-bootstrap'
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2'
 
 const Email = () => {
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_1zjx49k', 'template_ci800fk', e.target, 'CnzTFWCiU6i4j_Nzh')
+            .then(response => (
+                Swal.fire({
+                    title: 'Mensaje enviado Correctamente, Pronto te daremos respuesta',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                })
+            )
+            )
+            .catch(err => console.log(err))
+
+        Form.reset()
+
+    }
+
+
     return (
         <div className="contePrincipalEmail" id="contacto">
             <div className="divEmail" >
@@ -13,13 +39,13 @@ const Email = () => {
                 </div>
                 <br></br>
 
-                <Form>
+                <Form onSubmit={sendEmail}>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                        <Form.Control className="inputEmail" type="text" placeholder="Nombre" />
+                        <Form.Control className="inputEmail" name='user_name' type="text" placeholder="Nombre" />
                         <br></br>
-                        <Form.Control className="inputEmail" type="email" placeholder="email@example.com" />
+                        <Form.Control className="inputEmail" name='user_email' type="email" placeholder="email@example.com" />
                         <br></br>
-                        <Form.Control className="inputEmailtextarea" as="textarea" rows={3} placeholder="Qué nos quieres decir" />
+                        <Form.Control className="inputEmailtextarea" as="textarea" rows={3} name='user_message' placeholder="Qué nos quieres decir" />
                         <br></br>
                         <button className="btnEmail"> Enviar Mensaje</button>
                     </Form.Group>

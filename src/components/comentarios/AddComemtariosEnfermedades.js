@@ -52,7 +52,7 @@ export default function AddComentariosEnfermedades() {
 
 
     return (
-        <div className="container-fluid">
+        <div>
 
             <div className="conteComen">
                 <ListarComentariosEnfermedades />

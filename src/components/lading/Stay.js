@@ -14,19 +14,29 @@ const Stay = () => {
 
                     <br></br>
                     <div className="stayTitulo">
-                        <h2>BABY-HELP fue creada para resolver todas tus dudas, brindandote información clara de los cuidados que necesita tu bebé. </h2>
+                        <h3>BABYHELP fue creada para ayudarte a resolver éstas y muchas otras dudas acerca de la maternidad, a su vez te ayudará a hacer tu día a día más organizado.
+
+                        </h3>
                     </div>
                     <br></br>
 
                     <div className="stayP">
-                        <p>El objetivo de Baby-Help es ayudarte con las dudas que genera ser madre primeriza</p>
+                        <p>El objetivo de <strong>BabyHelp</strong> es ayudar a todas las madres primerizas
+                            a adquirir las habilidades y conocimientos para los cuidados que
+                            requieren sus bebés al nacer, sin dejar de lado la cotidianidad y
+                            el estrés que pueda presentarse diariamente. <br></br><br></br>
 
-                        <p>Sabemos lo complejo que es no tener los conocimientos necesarios y el miedo que genera el pensar 'que no podras lograrlo', PERO NO TE ANGUSTIES! Baby-Help te ayudara en cada paso que des con tu bebé.</p>
+                            Para ello <strong>BabyHelp</strong> posee componentes de <strong>Agendamiento de Actividades, Entretenimiento, Temas de Ayuda</strong> y
+                            en cada uno de ellos contiene blogs de comentarios con testimonios y experiencias de
+                            madres que ya han pasado por esta etapa, esto te ayudará a saber que no estas sola y que todo va a salir bien.
+                        </p>
+
+                        <p></p>
                         <br></br>
 
 
                         <div className="">
-                        <Link to="/login" className="btnPrimero"> Ir a App</Link>                        </div>
+                            <Link to="/login" className="btnPrimero"> Ir a App</Link>                        </div>
                     </div>
                 </div>
             </div>

@@ -4,21 +4,31 @@ import Stack from '@mui/material/Stack';
 import { Form } from 'react-bootstrap';
 import { useForm } from '../../Hooks/useForm';
 import { useDispatch, useSelector } from 'react-redux';
-import { addcomentariosVacunasAsync} from '../../redux/actions/actionComentariosVacunas';
+import { addcomentariosVacunasAsync } from '../../redux/actions/actionComentariosVacunas';
 import uuid from 'react-uuid';
 import '../../styles/Blogs.css'
 import ListarComentariosVacunas from './ListarComentariosVacunas';
+import { useEffect } from 'react';
+import { listperfilAsyn } from '../../redux/actions/actionPerfil';
 
 export default function AddComentariosVacunas() {
 
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(listperfilAsyn())
+    }, [])
+
+    const { perfil } = useSelector(store => store.perfil)
+
+    let perfill = perfil[0]?.nombremama;
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         dispatch(addcomentariosVacunasAsync({
             ...formValue,
-            nombre: 'pepe',
+            nombre: perfill,
             fecha: output,
             id: uuid()
         }))

@@ -15,33 +15,35 @@ body {
     margin: 0 auto;
 }
 
-.barra{
+.barra {
     background-color: hsl(281, 99%, 32%);
-    height:50px;
+    height: 50px;
 }
 
-.divBarraRel{
+.divBarraRel {
     background-color: hsl(281, 99%, 32%);
     padding: 1% 0 .5% 0;
     color: white;
     width: 40%;
     border-radius: 50px;
 }
+
 .container-fluid {
-    width: 90%;
+    width: 96%;
 
 }
 
-.linkDentro{
+.linkDentro {
     text-decoration: none;
     color: hsl(281, 99%, 32%);
     /* color: black;
 } */
 }
-.linkDentro:hover{
+
+.linkDentro:hover {
     text-decoration: none;
     color: hsl(0, 0%, 0%);
-    
+
 }
 
 .navbar-expand {
@@ -54,13 +56,13 @@ body {
 
 }
 
-.navbar-light .navbar-nav .nav-link:hover{
+.navbar-light .navbar-nav .nav-link:hover {
     text-decoration: none;
     color: hsl(281, 99%, 32%);
-    
+
 }
 
-.linkNavLanding{
+.linkNavLanding {
     text-decoration: none;
     background-color: pink;
     padding: 5% 9%;
@@ -98,6 +100,7 @@ body {
     width: 100%;
     font-family: 'Open Sans', sans-serif;
     text-align: justify;
+    font-size: 1.4rem;
 }
 
 .btnPrimero {
@@ -111,7 +114,7 @@ body {
     font-size: 1.3rem;
 }
 
-.btnPrimero:hover{
+.btnPrimero:hover {
     color: black;
     background-color: white;
     border: 1px solid blue;
@@ -120,7 +123,7 @@ body {
 .segundo {
     width: 100%;
     margin: 0 auto;
-    margin-top: 8%;
+    margin-top: 10%;
     margin-bottom: 8%;
     text-align: center;
     color: black;
@@ -148,15 +151,13 @@ h5 {
 }
 
 .stayTitulo {
-    width: 90%;
-}
-
-.stayP {
     width: 97%;
 }
 
+
 .stayP p {
     text-align: justify;
+    font-size: 1.3rem;
 }
 
 .iconSig {
@@ -253,20 +254,20 @@ footer {
 .colFooterUno {
     display: flex;
     justify-content: center;
-    /* width: 30% */
+    
 }
 
-.colFooterUno p{
+.colFooterUno p {
     padding-left: 3%;
 }
 
 .colFooterDos {
     display: flex;
     flex-direction: column;
-    /* width: 25% */
+    
 }
 
-.colFooterDos p{
+.colFooterDos p {
     padding-left: 3%;
 }
 
@@ -337,7 +338,7 @@ Form {
     color: white;
 }
 
-.inputEmailtextarea{
+.inputEmailtextarea {
     width: 62%;
     border-radius: 15 0px;
     margin-right: 2%;
@@ -350,7 +351,7 @@ Form {
     color: white;
 }
 
-.inputEmailtextarea::placeholder{
+.inputEmailtextarea::placeholder {
     padding-left: 5%;
     color: white;
 }
@@ -366,7 +367,7 @@ Form {
     font-size: 1rem
 }
 
-.btnEmail:hover{
+.btnEmail:hover {
     background-color: white;
     border: 1px solid blue;
 }
@@ -375,7 +376,7 @@ Form {
     width: 75%;
 }
 
-.divh3 p{
+.divh3 p {
     font-size: 1.2rem;
 }
 
@@ -395,16 +396,16 @@ Form {
 }
 
 
-.icon:hover{
+.icon:hover {
     color: white;
 }
 
-.linkFOO{
+.linkFOO {
     color: black;
     text-decoration: none;
 }
 
-.linkFOO:hover{
+.linkFOO:hover {
     color: rgb(255, 255, 255);
 }
 
@@ -423,10 +424,8 @@ Form {
 
     .icon {
         border-radius: 50px;
-        /* border: 1px solid white; */
-        /* margin: 5%; */
         height: 30%;
-        /* width: 100%; */
+        
         text-align: center;
     }
 
@@ -441,36 +440,34 @@ Form {
 
     footer {
         margin-top: 10%;
-        /* padding-top: 10%; */
+        
     }
 
-    .imgCuatro {
-        width: 30%
-    }
+
 
     .icon {
-        display: flex; 
-        
+        display: flex;
+
         text-align: center;
     }
 
-    .imgLogoFooter{
+    .imgLogoFooter {
         width: 30%;
     }
-    
+
 }
 
 @media (max-width: 768px) {
 
-    .logoNavDentro{
+    .logoNavDentro {
         width: 85%;
     }
 
-    .footerow3{
+    .footerow3 {
         padding: 3% 0;
     }
 
-    .footerow3ico{
+    .footerow3ico {
         padding: 4% 0 9% 0;
     }
 
@@ -479,17 +476,17 @@ Form {
         padding: 3% 0;
     }
 
-    .footerow3iconos a{
-        padding:  0 3%;
+    .footerow3iconos a {
+        padding: 0 3%;
     }
 
     .primero {
         width: 95%;
         margin-top: 10%;
-        
+
     }
 
-    .divEmail{
+    .divEmail {
         width: 100%;
         padding: 15% 7%;
     }
@@ -497,15 +494,16 @@ Form {
     .divh3 p {
         font-size: 1rem;
     }
+
     .segundo {
         margin-top: 20%;
-        
+
     }
 
-    .der{
+    .der {
         text-align: justify;
     }
-    
+
 
     .btnPrimero {
         display: flex;
@@ -542,19 +540,16 @@ Form {
     .colFooterDos,
     .colFooterCinco {
         width: 100%;
-        /* padding-bottom: 10%; */
-    }
-
-    .colFooterTres{
-        width: 90%;
-        /* padding-bottom: 10%; */
-        /* text-align: start; */
-        /* padding-left: 14%; */
-
-    }
-
-    .colFooterCinco{
         
+    }
+
+    .colFooterTres {
+        width: 90%;
+  
+    }
+
+    .colFooterCinco {
+
         justify-content: center;
 
     }
@@ -583,7 +578,7 @@ Form {
         padding: 5% 0%;
     }
 
-    .inputEmailtextarea{
+    .inputEmailtextarea {
         width: 100%;
         margin-bottom: 5%;
         padding: 5% 0%;
@@ -597,19 +592,20 @@ Form {
 
     .icon {
         display: flex;
-      
+
         text-align: center;
     }
 
-    svg{
-        height:2.5rem;
+    svg {
+        height: 2.5rem;
     }
-    .divImgFooter{
-        
+
+    .divImgFooter {
+
         text-align: center;
     }
 
-    .imgLogoFooter{
+    .imgLogoFooter {
         width: 50%;
     }
 
@@ -635,7 +631,7 @@ Form {
         margin-bottom: 5%;
     }
 
-  
+
     .imgFoo {
         width: 13%;
         height: 60%;
@@ -643,14 +639,10 @@ Form {
         padding-right: 5%;
     }
 
-    .imgCuatro {
-        width: 30%;
-        height: 22%
-    }
 
     .icon {
         display: flex;
-       
+
         text-align: center;
 
     }
@@ -661,32 +653,32 @@ Form {
         justify-content: center;
     }
 
-    .divImgFooter{
-        
+    .divImgFooter {
+
         text-align: center;
     }
 
-    .imgLogoFooter{
+    .imgLogoFooter {
         width: 60%;
     }
 
-    svg{
-        height:2.5rem;
+    svg {
+        height: 2.5rem;
         text-align: center;
     }
 
-    .ubi{
+    .ubi {
         width: 12%;
-        height:30%;
+        height: 30%;
     }
 
-    .colFooterCinco{
+    .colFooterCinco {
         display: flex;
         justify-content: center;
         text-align: center;
 
     }
 
-    
+
 
 }

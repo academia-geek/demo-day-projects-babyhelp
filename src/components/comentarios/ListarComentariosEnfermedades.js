@@ -8,7 +8,6 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { listcomentariosEnfermedadesAsyn} from '../../redux/actions/actionComentariosEnfermedades';
@@ -28,17 +27,17 @@ export default function ListarComentariosEnfermedades() {
 
 
     return (
-        <div className="container-fluid">
+        <div className="divlistEnfe" style={{display: 'flex', flexDirection: 'column', justifyContent:'end', alignItems: 'end'}}>
             {
                 comentariosEnfermedades.map(c => (
-                    <Card sx={{ maxWidth: '90%', margin: '0 auto', marginTop: '4%' }}>
+                    <Card sx={{ width: '90%'}} className="cardsColicoComent">
                         <CardHeader
                             avatar={
                                 <Avatar src="/broken-image.jpg" />
                             }
                             action={
                                 <IconButton aria-label="settings">
-                                    <MoreVertIcon />
+                                    {/* <MoreVertIcon /> */}
                                 </IconButton>
                             }
                             title={c.nombre}

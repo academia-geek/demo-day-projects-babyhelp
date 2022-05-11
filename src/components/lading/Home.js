@@ -18,9 +18,12 @@ const Home = () => {
 
           <div className="col-md-6 izq">
 
-            <h3>¿Eres madre primeriza y no te sientes preparada para esta nueva etapa que estas viviendo?</h3>
+            <h2>¿Eres madre primeriza y no te sientes preparada para esta nueva etapa que estas viviendo?</h2>
             <br></br>
-            <p className="pPrimero">No tienes porque preocuparte BABY-HELP fue diseñada para mujeres como tú, Dá el primer paso a conocer y aprender los conocmientos y atenciones que requiere tu bebé</p>
+            <p className="pPrimero">No tienes por qué preocuparte <strong>BABYHELP</strong> fue diseñada 
+            para mujeres como tú, Dá el primer paso a conocer y aprender los conocimientos, cuidados, 
+            innovación en maternidad y todo lo que requieres saber para sacar 
+            adelante esta hermosa etapa de ser madre</p>
             <br></br>
 
             <Link to="/login" className="btnPrimero"> Ir a App</Link>
