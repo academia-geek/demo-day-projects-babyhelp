@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contelacta p {
+    font-size: 1.4rem;
+}
+
+.divlactatext {
+    width: 98%;
+    padding: 6% 8%;
+    background-color: rgb(221, 113, 113);
+    box-shadow: 4px 4px 10px rgb(0 0 0 / 80%), -4px -4px 10px rgb(255 255 255 / 40%), inset -4px -4px 10px rgb(0 0 0 / 40%), inset 4px 4px 10px rgb(255 255 255 / 40%);
+    margin: 0 auto;
+    margin-top: 4%;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+}
+
+.bodyAcor {
+    width: 90%;
+    margin: 0 auto;
+}
+.linkhom img {
+    padding-bottom: 4%;
+}
+
+.contP label{
+    color: rgb(26, 20, 40);
+}
+
+.contP input{
+    background-color: rgb(154, 189, 203) !important;
+    border: none !important;
+    margin-bottom: 3%;
+}
+
+.btnedi{
+    background-color: rgb(238, 111, 255)!important;
+    color:  black!important;
+    font-weight: bold !important;
+    border: none !important;
+    padding: 2% 7%!important;
+    font-size: 1.3rem !important;
+}
+
+.btnedi:hover{
+    background-color: rgb(178, 179, 179)!important;
+    color:  black!important;
+    font-weight: bold !important;
+    border: none !important;
+    padding: 2% 7%!important;
+    font-size: 1.3rem !important;
+}
+
+@media (max-width: 768px) {
+    .bodyAcor video {
+        width: 90% !important;
+    }
+
+    .linkLactar img {
+        width: 20%
+    }
+
+    .divlactatext p {
+        font-size: 1.1rem;
+    }
+
+    .accordion {
+        width: 100% !important;
+    }
+
+    .dic {
+        width: 95% !important;
+        ;
+    }
+
+    .linkhom img {
+
+        width: 20%;
+        padding-bottom: 7%;
+    }
+}

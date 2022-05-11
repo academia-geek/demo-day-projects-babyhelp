@@ -15,7 +15,7 @@ const Entretenimiento = () => {
       
       <div className="container-fluid" style={{ margin: '0 auto', display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'center', flexDirection: 'column' }}>
         
-      <h6 style={{ backgroundColor: 'violet', padding: '2%', fontSize: '1.4rem', fontWeight: 'bold' }}>
+      <h4 className="divlactatext">
         El nacimiento de un bebé te pone a prueba de diferentes maneras:
         a nivel hormonal, físico, emocional, psicológico y químico, debido a ello,
         es posible que te sientas fatigada, emocionada, frustrada, preocupada y
@@ -26,7 +26,7 @@ const Entretenimiento = () => {
         tu bebé y/o ver algunos videos, esto mejorará tu estado de ánimo y hará
         tu día a día un poco mas divertido, échale un vistazo a las siguientes
         secciones:
-      </h6>
+      </h4>
 
       <br></br>
       <br></br>

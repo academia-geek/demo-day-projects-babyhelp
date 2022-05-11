@@ -12,6 +12,8 @@ import { comentariosEnfermedadesReducers } from "../reducers/comentariosEnfermed
 import { comentariosColicosReducers } from "../reducers/comentariosColicosReducers";
 import { comentariosVacunasReducers } from "../reducers/comentariosVacunasReducers";
 import { comentariosDesteteReducers } from "../reducers/comentariosDesteteReducers";
+import { perfilReducers } from "../reducers/perfilReducers";
+
 
 
 
@@ -30,6 +32,7 @@ const reducers = combineReducers({
     comentariosColicos: comentariosColicosReducers,
     comentariosVacunas: comentariosVacunasReducers,
     comentariosDestete: comentariosDesteteReducers,
+    perfil: perfilReducers,
 });
 
 

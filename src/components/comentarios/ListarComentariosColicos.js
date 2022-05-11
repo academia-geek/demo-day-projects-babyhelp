@@ -35,7 +35,7 @@ export default function ListarComentariosColicos() {
         <div className="comentColicos">
             {
                 comentariosColicos.map(c => (
-                    <Card className="cardsColicoComent">
+                    <Card className="cardsColicoComent" style={{width:'90%'}}>
                         <CardHeader
                             avatar={
                                 <Avatar src="/broken-image.jpg" />

@@ -8,10 +8,20 @@ import { addcomentariosEnfermedadesAsync } from '../../redux/actions/actionComen
 import uuid from 'react-uuid';
 import '../../styles/Blogs.css'
 import ListarComentariosEnfermedades from './ListarComentariosEnfermedades';
+import { useEffect } from 'react';
+import { listperfilAsyn } from '../../redux/actions/actionPerfil';
 
 export default function AddComentariosEnfermedades() {
 
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(listperfilAsyn())
+    }, [])
+
+    const { perfil } = useSelector(store => store.perfil)
+
+    let perfill = perfil[0]?.nombremama;
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -20,7 +30,7 @@ export default function AddComentariosEnfermedades() {
 
         dispatch(addcomentariosEnfermedadesAsync({
             ...formValue,
-            nombre: 'pepe',
+            nombre: perfill,
             fecha: output,
             id: uuid()
         }))

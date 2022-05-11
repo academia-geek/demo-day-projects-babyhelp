@@ -10,7 +10,7 @@
 }
 
 .semana1 .h2 {
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .semana1 h3 {
@@ -42,4 +42,29 @@
     background-color:violet;
     padding: 7%;
     text-align: center
+}
+
+@media (max-width: 768px) {
+
+    .semana1 .h2 {
+        font-size: 1.5em;
+        
+    }
+
+    .listgroupSema{
+        padding-bottom: 10%;
+    }
+
+    .semana1 p {
+        font-size: 1rem;
+    }
+
+    .lis{
+        font-size: 1rem!important;
+    }
+
+    .semana1 li {
+        font-size: 1rem;
+    }
+
 }

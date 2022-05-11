@@ -24,7 +24,6 @@ export default function RecipeReviewCard() {
     }, [])
 
     const { comentarios } = useSelector(store => store.comentarios);
-    // console.log(comentarios)
 
 
 

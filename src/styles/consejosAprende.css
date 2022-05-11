@@ -78,6 +78,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 5%;
+   
 }
 
 .divInfoSabias {
@@ -135,11 +136,15 @@
 
 .divContenConsejos{
     width: 95%!important;
+   
 }
 
 .linkatras img{
     width: 20% 
 
+}
+.contImgMeses{
+    display: inline-block;
 }
 
 }

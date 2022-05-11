@@ -15,7 +15,12 @@ const Email = () => {
 
                 <Form>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Control className="inputEmail" type="text" placeholder="Nombre" />
+                        <br></br>
                         <Form.Control className="inputEmail" type="email" placeholder="email@example.com" />
+                        <br></br>
+                        <Form.Control className="inputEmailtextarea" as="textarea" rows={3} placeholder="Qué nos quieres decir" />
+                        <br></br>
                         <button className="btnEmail"> Enviar Mensaje</button>
                     </Form.Group>
                 </Form>

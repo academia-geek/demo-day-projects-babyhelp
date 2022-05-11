@@ -8,19 +8,27 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addcomentariosAsync, listcomentariosAsyn } from '../redux/actions/actionComentarios';
 import uuid from 'react-uuid';
 import '../styles/Blogs.css'
+import { useEffect } from 'react';
+import { listperfilAsyn } from '../redux/actions/actionPerfil';
 
 export default function FallbackAvatars() {
 
     const dispatch = useDispatch()
 
+    useEffect(() => {
+        dispatch(listperfilAsyn())
+    }, [])
+
+    const { perfil } = useSelector(store => store.perfil)
+
+    let perfill = perfil[0]?.nombremama;
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // console.log(e.target);
-
         dispatch(addcomentariosAsync({
             ...formValue,
-            nombre: 'pepe',
+            nombre: perfill,
             fecha: output,
             id: uuid()
         }))

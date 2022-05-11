@@ -8,8 +8,8 @@ const AprendeMas = () => {
   return (
 
     <>
-<br></br>
-<br></br>
+      <br></br>
+      <br></br>
 
       <div className="container-fluid divContenConsejos">
 
@@ -42,27 +42,27 @@ const AprendeMas = () => {
                   <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651809430/xwtlruqusuirbf0fftda.png" width="40%" />
                 </div>
                 <br></br>
-                <p>Consejos sobre bebés: recién nacidos</p>
+                <p>Consejos sobre bebés: recién <br></br>nacidos</p>
               </a>
             </Col>
 
             <Col sm={4}>
               <a href="#unoSeisMeses" className="aImgMeses">
                 <div>
-                  <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651809526/rwsyrxdtusisa1h7fmsy.png" width="40%" />
+                  <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1652192593/relajacion/waqzzdhztweejep8qty1.png" width="40%" />
                 </div>
                 <br></br>
-                <p>Consejos sobre bebés: de 1-6 meses</p>
+                <p>Consejos sobre bebés: de 4-24 semanas</p>
               </a>
             </Col>
 
             <Col sm={4}>
               <a href="#seisNueveMeses" className="aImgMeses">
                 <div>
-                  <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651809531/vzobnniuexainco90f2m.png" width="40%" />
+                  <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1652192598/relajacion/hxnpfcizpzerglwj3q2d.png" width="40%" />
                 </div>
                 <br></br>
-                <p>Consejos sobre bebés: de 6-9 meses</p>
+                <p>Consejos sobre bebés: de 24- 36 semanas</p>
               </a>
             </Col>
           </Row>
@@ -72,10 +72,10 @@ const AprendeMas = () => {
             <Col sm={4}>
               <a href="#nueveDoceMeses" className="aImgMeses">
                 <div>
-                  <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651809536/qn84lahoefriyzkv0weg.png" width="40%" />
+                  <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1652192617/relajacion/yvq0xttblushc3ulq2z5.png" width="40%" />
                 </div>
                 <br></br>
-                <p>Consejos sobre bebés: de 9-12 meses</p>
+                <p>Consejos sobre bebés: de 36-48 semanas (1 año)</p>
               </a>
             </Col>
 
@@ -112,7 +112,7 @@ const AprendeMas = () => {
 
             <center>
               <div>
-                <img src="https://www.babysitio.com/wp-content/uploads/2016/02/controles-del-recien-nacido.jpg"  width="60%" className="imgSabiasBb" />
+                <img src="https://www.babysitio.com/wp-content/uploads/2016/02/controles-del-recien-nacido.jpg" width="60%" className="imgSabiasBb" />
               </div>
             </center>
 
@@ -147,12 +147,12 @@ const AprendeMas = () => {
           <br></br>
 
           <div id="unoSeisMeses" className="divrecien">
-            <h3 className="h3aprendemas">De uno a seis meses</h3>
+            <h3 className="h3aprendemas">De uno a 4-24 semanas</h3>
             <br></br>
 
             <center>
               <div>
-                <img src="https://www.eltiempo.com/abc_files/article_main/uploads/2017/10/11/59def2d900149.jpeg"  width="60%" className="imgSabiasBb" />
+                <img src="https://www.eltiempo.com/abc_files/article_main/uploads/2017/10/11/59def2d900149.jpeg" width="60%" className="imgSabiasBb" />
               </div>
             </center>
 
@@ -188,13 +188,13 @@ const AprendeMas = () => {
 
 
           <div id="seisNueveMeses" className="divrecien">
-            <h3 className="h3aprendemas">De seis a nueve meses</h3>
+            <h3 className="h3aprendemas">De 24-36 semanas</h3>
             <br></br>
 
 
             <center>
               <div>
-                <img src="https://madreshoy.com/wp-content/uploads/2012/10/Juegos-estimulantes-para-bebes-de-6-a-9-meses-2.jpg"  width="60%" className="imgSabiasBb" />
+                <img src="https://madreshoy.com/wp-content/uploads/2012/10/Juegos-estimulantes-para-bebes-de-6-a-9-meses-2.jpg" width="60%" className="imgSabiasBb" />
               </div>
             </center>
 
@@ -227,12 +227,12 @@ const AprendeMas = () => {
           <br></br>
 
           <div id="nueveDoceMeses" className="divrecien">
-            <h3 className="h3aprendemas">De nueve a 12 meses</h3>
+            <h3 className="h3aprendemas">De 36-48 semanas (1 año)</h3>
             <br></br>
 
             <center>
               <div>
-                <img src="https://e.rpp-noticias.io/xlarge/2019/11/27/402940_869358.jpg"  width="60%" className="imgSabiasBb" />
+                <img src="https://e.rpp-noticias.io/xlarge/2019/11/27/402940_869358.jpg" width="60%" className="imgSabiasBb" />
               </div>
             </center>
 
@@ -268,7 +268,7 @@ const AprendeMas = () => {
 
             <center>
               <div>
-                <img src="https://jugueteeducativo.org/wp-content/uploads/2018/11/Juguetes-educativos-para-ni%C3%B1os-de-1-a-2-a%C3%B1os-1024x525.jpg"  width="60%" className="imgSabiasBb" />
+                <img src="https://jugueteeducativo.org/wp-content/uploads/2018/11/Juguetes-educativos-para-ni%C3%B1os-de-1-a-2-a%C3%B1os-1024x525.jpg" width="60%" className="imgSabiasBb" />
               </div>
             </center>
 
@@ -308,7 +308,7 @@ const AprendeMas = () => {
 
             <center>
               <div>
-                <img src="https://img.freepik.com/foto-gratis/nina-dos-anos-dibuja-colorea-suelo_87414-1002.jpg"  width="60%" className="imgSabiasBb" />
+                <img src="https://img.freepik.com/foto-gratis/nina-dos-anos-dibuja-colorea-suelo_87414-1002.jpg" width="60%" className="imgSabiasBb" />
               </div>
             </center>
 

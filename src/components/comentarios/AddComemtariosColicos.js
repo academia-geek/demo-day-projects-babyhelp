@@ -8,17 +8,27 @@ import { addcomentariosColicosAsync} from '../../redux/actions/actionComentarios
 import uuid from 'react-uuid';
 import '../../styles/Blogs.css'
 import ListarComentariosColicos from './ListarComentariosColicos';
+import { listperfilAsyn } from '../../redux/actions/actionPerfil';
+import { useEffect } from 'react';
 
 export default function AddComentariosColicos() {
 
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(listperfilAsyn())
+    }, [])
+
+    const { perfil } = useSelector(store => store.perfil)
+
+    let perfill = perfil[0]?.nombremama;
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         dispatch(addcomentariosColicosAsync({
             ...formValue,
-            nombre: 'pepe',
+            nombre: perfill,
             fecha: output,
             id: uuid()
         }))

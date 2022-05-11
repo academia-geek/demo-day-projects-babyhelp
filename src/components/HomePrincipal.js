@@ -56,31 +56,31 @@ const HomePrincipal = () => {
                                     <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651809430/xwtlruqusuirbf0fftda.png" width="40%" />
                                 </div>
                                 <br></br>
-                                <p>Consejos sobre bebés: recién nacidos</p>
+                                <p>Consejos sobre bebés: recién <br></br>nacidos</p>
                             </Link>
 
                             <Link to="/aprendemas" className="aImgMeses">
                                 <div>
-                                    <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651809526/rwsyrxdtusisa1h7fmsy.png" width="40%" />
+                                    <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1652192593/relajacion/waqzzdhztweejep8qty1.png" width="40%" />
                                 </div>
                                 <br></br>
-                                <p>Consejos sobre bebés: de 1-6 meses</p>
+                                <p>Consejos sobre bebés: de 4-24 semanas</p>
                             </Link>
 
                             <Link to="/aprendemas" className="aImgMeses">
                                 <div>
-                                    <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651809531/vzobnniuexainco90f2m.png" width="40%" />
+                                    <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1652192598/relajacion/hxnpfcizpzerglwj3q2d.png" width="40%" />
                                 </div>
                                 <br></br>
-                                <p>Consejos sobre bebés: de 6-9 meses</p>
+                                <p>Consejos sobre bebés: de 24- 36 semanas</p>
                             </Link>
 
                             <Link to="/aprendemas" className="aImgMeses">
                                 <div>
-                                    <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651809536/qn84lahoefriyzkv0weg.png" width="40%" />
+                                    <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1652192617/relajacion/yvq0xttblushc3ulq2z5.png" width="40%" />
                                 </div>
                                 <br></br>
-                                <p>Consejos sobre bebés: de 9-12 meses</p>
+                                <p>Consejos sobre bebés: de 36-48 semanas (1 año) </p>
                             </Link>
 
                             <Link to="/aprendemas" className="aImgMeses">
@@ -131,14 +131,6 @@ const HomePrincipal = () => {
 
                 <br></br>
                 <br></br>
-
-
-                {/* <center>
-                    <div className="divBarraRel">
-                        <h2>Curiosidades</h2>
-                    </div>
-                </center> */}
-
                 <br></br>
                 <br></br>
                 <br></br>

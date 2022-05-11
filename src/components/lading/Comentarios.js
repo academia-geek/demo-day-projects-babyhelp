@@ -1,7 +1,23 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { listperfilAsyn } from '../../redux/actions/actionPerfil'
+import { listcomentariosAsyn } from '../../redux/actions/actionComentarios';
 
 const Comentarios = () => {
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(listperfilAsyn())
+        dispatch(listcomentariosAsyn())
+
+
+    }, [])
+
+    const { perfil } = useSelector(store => store.perfil)
+    const { comentarios } = useSelector(store => store.comentarios);
     return (
         <>
 
@@ -16,14 +32,14 @@ const Comentarios = () => {
                             <Card.Body>
 
                                 <Card.Text>
-                                    Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
+                                    Estoy muy agradecida soy madre primeriza y no tenía ni idea de cómo cuidar a mi bebé, <strong>BabyHelp</strong> tiene todos lo necesario para llevar el día a día de mi maternidad de forma calmada sin preocuparme de no poder lograrlo...<br></br><br></br>  <strong>ME ENCANTO</strong> la sección de <strong>ENTRETENIMIENTO</strong>, mi abuela dice que para amamantar debo estar relajada y aqui lo pude lograr
                                 </Card.Text>
 
                                 <div className="imgCard">
 
-                                    <img className="img" src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1649053236/landing%20Page/images/profile-1_ht3qyw.jpg" width="15%" />
+                                    <img className="img" src={perfil[0]?.foto} width="15%" />
 
-                                    <p className="pComImg">Satish Patel<br></br> Founder & CEO Hunddle </p>
+                                    <p className="pComImg">Pepita Pérez</p>
                                 </div>
 
                             </Card.Body>
@@ -35,15 +51,15 @@ const Comentarios = () => {
                             <Card.Body>
 
                                 <Card.Text>
-                                    Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
+                                    No sabía nada de lactancia materna y <strong>Me encanta</strong> que en todas las secciones explicativas tienen <strong>videos</strong> yo poco entiendo leyendo y eso me pareció genial, <strong><br></br> Noooooo! y las tecnicas de suplementación,</strong> ya voy a ingresar a trabajar y no quiero dejar de lactar a mi bebé con las técnicas que nos indica <strong>BabyHelp</strong> no tendré que preocuparme. Felicidades me ayudaron mucho...
 
                                 </Card.Text>
 
                                 <div className="imgCard">
 
-                                    <img className="img" src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1649040437/landing%20Page/images/profile-2_t56ppl.jpg" width="15%" />
+                                    <img className="img" src="https://yt3.ggpht.com/ytc/AKedOLRGjKHXFWfG136qrHpHm-4O77PZWz1BsEI0_uY-=s900-c-k-c0x00ffffff-no-rj" width="15%" />
 
-                                    <p className="pComImg">Satish Patel<br></br> Founder & CEO Hunddle </p>
+                                    <p className="pComImg">Pati de las Casas</p>
                                 </div>
 
                             </Card.Body>
@@ -55,15 +71,14 @@ const Comentarios = () => {
                             <Card.Body>
 
                                 <Card.Text>
-                                    Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
-
+                                    Tengo mi cabeza super <strong>desorganizada</strong> por el nuevo cambio de vida tras la llegada de mi bebé a nuestras vidas <br></br><br></br>y la sección de <strong>TAREAS</strong> es super buena ya que la mayor parte del tiempo me la paso en el medios tecnológicos y que mejor manera de buscar las cosas que he realizado y las que me faltan por hacer sin necesidad de una agenda.... buenísimo!
                                 </Card.Text>
 
                                 <div className="imgCard">
 
                                     <img className="img" src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1649040437/landing%20Page/images/profile-3_bhtpde.jpg" width="15%" />
 
-                                    <p className="pComImg">Satish Patel<br></br> Founder & CEO Hunddle </p>
+                                    <p className="pComImg">Maria Antonieta</p>
 
                                 </div>
 

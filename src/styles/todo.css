@@ -8,13 +8,16 @@
 
 
 .conteTodo {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 3%;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 900;
-    font-size: 1rem;
 
+}
+
+.conteTodo h5 {
+    font-size: 1.6rem;
 }
 
 .conteTitulo {
@@ -38,7 +41,7 @@
 .forContr {
     border: none ! important;
     border-bottom: 1px solid grey ! important;
-    
+
 }
 
 
@@ -58,7 +61,7 @@
 
 .inputLabelTarea {
     font-size: 1.3rem;
-    
+
 }
 
 .inputLabelTareaFecha {
@@ -314,6 +317,22 @@
         border-radius: 0.25rem;
     }
 
+    .linkatrasTodo img {
+        width: 20%;
+        padding-bottom: 5%;
+
+    }
+    
+    .divlactatext h5{
+        font-size: 1.3rem;
+    }
+
+    .btnAddTarea{
+        
+        margin: 0 auto;
+        margin-top: 7%;
+        padding: 6% !important;
+    }
 
 }
 

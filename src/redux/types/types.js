@@ -5,6 +5,13 @@ export const typesAcciones = {
     deleteItem: 'deleteItem',
 }
 
+export const typesPerfil = {
+    addperfil: 'addperfil',
+    listperfil: 'listperfil',
+    editarperfil: 'editarperfil',
+    deleteperfil: 'deleteperfil',
+}
+
 export const typesEnfermedades = {
     list: 'list'
 }

@@ -11,6 +11,7 @@ import '../../styles/todo.css'
 import { DatePicker, DateTimePicker, TimePicker } from '@material-ui/pickers'
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import { Link } from 'react-router-dom';
 
 
 const ImgFondo = () => {
@@ -98,14 +99,20 @@ const ImgFondo = () => {
     return (
 
         <div className="container-fluid">
+            <br></br>
+            <br></br>
+            <Link to="/" className="linkatrasTodo">
+                <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651544520/babyhelp/hgq97eg6ho7ipy7zyiw3.png" width="7%" />
+            </Link>
+
             <div className="conteTodo">
-                <div className="conteTitulo">
-                    <p>Sabemos que aveces es muy díficil recordar las nuevas
+                <div className="divlactatext">
+                    <h5>Sabemos que aveces es muy díficil recordar las nuevas
                         responsablidades que tienes como madre, es por ellos que
                         en esta seccion podras crear, eliminar y filtrar tareas pendientes, esto te ayudará a organizar
-                        tu día a día y hacer un poco más fácil tu proceso </p>
+                        tu día a día y hacer un poco más fácil tu proceso </h5>
                 </div>
-
+                <br></br>
 
 
                 <div className="inputTodo">
@@ -139,28 +146,31 @@ const ImgFondo = () => {
                     </Form>
                 </div>
 
-                <Table striped bordered hover responsive>
-                    <thead >
-                        <tr className="headTable">
-                            <th>Nombre de la Tarea</th>
-                            <th>Fecha</th>
-                            <th>Editar</th>
-                            <th>Eliminar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {todo.map((tarea) => (
-
-                            <tr key={tarea.id}>
-                                <td className="td">{tarea.tarea}</td>
-                                <td className="td">{tarea.Fecha}</td>
-                                <td className="tdico"><EditIcon onClick={() => editar(tarea.id)} className="btnIconEdi" /></td>
-                                <td className="tdico"><DeleteIcon onClick={() => handleEliminar(tarea.id)} className="btnIcon" /></td>
+                <div>
+                    <Table striped bordered hover responsive>
+                        <thead >
+                            <tr className="headTable">
+                                <th>Nombre de la Tarea</th>
+                                <th>Fecha</th>
+                                <th>Editar</th>
+                                <th>Eliminar</th>
                             </tr>
+                        </thead>
+                        <tbody>
+                            {todo.map((tarea) => (
 
-                        ))}
-                    </tbody>
-                </Table>
+                                <tr key={tarea.id}>
+                                    <td className="td">{tarea.tarea}</td>
+                                    <td className="td">{tarea.Fecha}</td>
+                                    <td className="tdico"><EditIcon onClick={() => editar(tarea.id)} className="btnIconEdi" /></td>
+                                    <td className="tdico"><DeleteIcon onClick={() => handleEliminar(tarea.id)} className="btnIcon" /></td>
+                                </tr>
+
+                            ))}
+                        </tbody>
+                    </Table>
+                </div>
+
                 {
 
                     modal === true ? <Editar modal={enviarDatosModal} setModal={setModal} /> : ''

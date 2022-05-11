@@ -4,7 +4,6 @@ import { Accordion, Button, Col, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { listAprendeAsyn } from '../redux/actions/actionAcciones';
-import { listVacunasAsyn } from '../redux/actions/actionVacunas';
 import '../styles/AcordeonInterno.css'
 
 const Curiosidades = () => {
@@ -16,10 +15,6 @@ const Curiosidades = () => {
 
     const { aprende } = useSelector(store => store.aprende);
 
-    const handleMoreInfo = (id) => {
-        localStorage.setItem('id', JSON.stringify(id));
-
-    }
 
     return (
         <div className="">

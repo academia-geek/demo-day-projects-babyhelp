@@ -25,11 +25,9 @@ const QueDeboSaber = () => {
                     <br></br>
                     <br></br>
 
-
-
                     <Tab.Container id="list-group-tabs-example" defaultActiveKey="#1">
                         <Row>
-                            <Col sm={4}>
+                            <Col sm={4} className= "listgroupSema">
                                 <div className="divSemanasList">
                                     <h3>Recién Nacidos</h3>
                                 </div>

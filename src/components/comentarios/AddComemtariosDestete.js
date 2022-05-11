@@ -8,17 +8,27 @@ import { addcomentariosDesteteAsync} from '../../redux/actions/actionComentarios
 import uuid from 'react-uuid';
 import '../../styles/Blogs.css'
 import ListarComentariosDestete from './ListarComentariosDestete';
+import { useEffect } from 'react';
+import { listperfilAsyn } from '../../redux/actions/actionPerfil';
 
 export default function AddComentariosDestete() {
 
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(listperfilAsyn())
+    }, [])
+
+    const { perfil } = useSelector(store => store.perfil)
+
+    let perfill = perfil[0]?.nombremama;
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         dispatch(addcomentariosDesteteAsync({
             ...formValue,
-            nombre: 'pepe',
+            nombre: perfill,
             fecha: output,
             id: uuid()
         }))

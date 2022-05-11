@@ -46,7 +46,6 @@ body {
 
 .navbar-expand {
     padding: 0 5%;
-    /* background-color: hsl(210, 64%, 81%); */
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -59,6 +58,13 @@ body {
     text-decoration: none;
     color: hsl(281, 99%, 32%);
     
+}
+
+.linkNavLanding{
+    text-decoration: none;
+    background-color: pink;
+    padding: 5% 9%;
+
 }
 
 
@@ -91,26 +97,33 @@ body {
 .pPrimero {
     width: 100%;
     font-family: 'Open Sans', sans-serif;
+    text-align: justify;
 }
 
 .btnPrimero {
-    width: 40%;
+    width: 90%;
     border: none;
-    padding: 2% 5%;
+    padding: 3% 20%;
     border-radius: 30px;
-    background-color: hsl(198, 60%, 50%)
+    background-color: hsl(198, 60%, 50%);
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.btnPrimero:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid blue;
 }
 
 .segundo {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 8%;
     margin-bottom: 8%;
     text-align: center;
     color: black;
-    /* background-color: hsl(0, 0%, 83%);
-    padding: 4%;
-    box-shadow: 20px 30px 60px 1px rgb(151, 151, 151); */
 }
 
 h2,
@@ -135,16 +148,22 @@ h5 {
 }
 
 .stayTitulo {
-    width: 85%;
+    width: 90%;
 }
 
 .stayP {
     width: 97%;
 }
 
+.stayP p {
+    text-align: justify;
+}
+
 .iconSig {
     margin-left: 3%
 }
+
+
 
 .divLinkStay {
     border-bottom: 1px solid hsl(176, 68%, 64%);
@@ -154,7 +173,6 @@ h5 {
 .link {
     text-decoration: none;
 }
-
 
 
 /* comillas */
@@ -220,8 +238,8 @@ footer {
     width: 100%;
     background-color: hsl(210, 64%, 81%);
     margin: 0 auto;
-    margin-top: 15%;
-    padding: 8% 5% 5% 5%;
+    margin-top: 5%;
+    padding: 3% 5% 5% 5%;
     color: black;
     font-size: 1.5rem;
 }
@@ -292,7 +310,8 @@ footer {
     background-color: hsl(0, 0%, 83%);
     padding: 3%;
     box-shadow: 10px 10px 13px 0px rgb(162, 189, 231);
-    border-radius: 5px
+    border-radius: 5px;
+    margin-top: 4%;
 }
 
 Form {
@@ -302,8 +321,11 @@ Form {
 
 .mb-3 {
     width: 100%;
+    margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-bottom: 0 !important;
 }
 
@@ -315,7 +337,20 @@ Form {
     color: white;
 }
 
+.inputEmailtextarea{
+    width: 62%;
+    border-radius: 15 0px;
+    margin-right: 2%;
+    background-color: rgb(125, 129, 149);
+    color: white;
+}
+
 .inputEmail::placeholder {
+    padding-left: 5%;
+    color: white;
+}
+
+.inputEmailtextarea::placeholder{
     padding-left: 5%;
     color: white;
 }
@@ -326,9 +361,14 @@ Form {
     padding: 2%;
     border-radius: 30px;
     background-color: hsl(198, 60%, 50%);
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
-    font-size: .8rem
+    font-size: 1rem
+}
+
+.btnEmail:hover{
+    background-color: white;
+    border: 1px solid blue;
 }
 
 .divh3 {
@@ -339,27 +379,24 @@ Form {
     font-size: 1.2rem;
 }
 
-.contePrincipalEmail {
-    position: absolute;
-    left: 20%;
-    margin-top: 8%
-}
+
 
 .icon {
     display: flex;
     align-items: center;
     border-radius: 50px;
-    border: 1px solid white;
-    margin: 5%;
-    width: 140%;
+    /* border: 1px solid white; */
+    margin: 20% 0;
+    width: 100%;
     height: 35%;
     text-align: center;
     justify-content: center;
+    color: black;
 }
 
 
 .icon:hover{
-    background-color: black;
+    color: white;
 }
 
 .linkFOO{
@@ -377,24 +414,19 @@ Form {
         margin-bottom: 5%;
     }
 
-    .contePrincipalEmail {
-        position: absolute;
-        left: 10%;
-        margin-top: 15%
-    }
+
 
     footer {
-        margin-top: 35%;
-        padding-top: 10%;
+        margin-top: 10%;
     }
 
 
     .icon {
         border-radius: 50px;
-        border: 1px solid white;
-        margin: 5%;
+        /* border: 1px solid white; */
+        /* margin: 5%; */
         height: 30%;
-        width: 100%;
+        /* width: 100%; */
         text-align: center;
     }
 
@@ -406,15 +438,10 @@ Form {
         margin-bottom: 5%;
     }
 
-    .contePrincipalEmail {
-        position: absolute;
-        left: 0;
-        margin-top: 15%
-    }
 
     footer {
-        margin-top: 35%;
-        padding-top: 10%;
+        margin-top: 10%;
+        /* padding-top: 10%; */
     }
 
     .imgCuatro {
@@ -423,24 +450,13 @@ Form {
 
     .icon {
         display: flex; 
-        flex-direction: column;
-        border-radius: 50px;
-        border: 1px solid white;
-        margin: 5%;
-        height: 20%;
-        width: 100%;
+        
         text-align: center;
     }
-
-    /* svg{
-        width: 7rem;
-        height:1.8rem;
-    } */
 
     .imgLogoFooter{
         width: 30%;
     }
-
     
 }
 
@@ -450,6 +466,22 @@ Form {
         width: 85%;
     }
 
+    .footerow3{
+        padding: 3% 0;
+    }
+
+    .footerow3ico{
+        padding: 4% 0 9% 0;
+    }
+
+    .footerow3iconos {
+        flex-direction: row !important;
+        padding: 3% 0;
+    }
+
+    .footerow3iconos a{
+        padding:  0 3%;
+    }
 
     .primero {
         width: 95%;
@@ -457,8 +489,17 @@ Form {
         
     }
 
+    .divEmail{
+        width: 100%;
+        padding: 15% 7%;
+    }
+
+    .divh3 p {
+        font-size: 1rem;
+    }
     .segundo {
         margin-top: 20%;
+        
     }
 
     .der{
@@ -467,7 +508,10 @@ Form {
     
 
     .btnPrimero {
-        width: 80%
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
     }
 
     .card {
@@ -475,10 +519,7 @@ Form {
         margin-bottom: 5%;
     }
 
-    footer {
-        margin-top: 35%;
-        padding-top: 40%;
-    }
+
 
     .conteFooter {
         flex-direction: column;
@@ -496,24 +537,19 @@ Form {
         padding-left: 5%;
     }
 
-    .contePrincipalEmail {
-        position: absolute;
-        left: 0%;
-        margin-top: 8%
-    }
 
     .colFooterUno,
     .colFooterDos,
     .colFooterCinco {
         width: 100%;
-        padding-bottom: 10%;
+        /* padding-bottom: 10%; */
     }
 
     .colFooterTres{
         width: 90%;
-        padding-bottom: 10%;
-        text-align: start;
-        padding-left: 14%;
+        /* padding-bottom: 10%; */
+        /* text-align: start; */
+        /* padding-left: 14%; */
 
     }
 
@@ -523,11 +559,6 @@ Form {
 
     }
 
-
-    .colFoote {
-        justify-content: left;
-
-    }
 
     .contetrooter {
         margin: 0 auto;
@@ -550,20 +581,23 @@ Form {
         width: 100%;
         margin-bottom: 5%;
         padding: 5% 0%;
+    }
 
+    .inputEmailtextarea{
+        width: 100%;
+        margin-bottom: 5%;
+        padding: 5% 0%;
+        border-radius: 15px;
+    }
 
+    .inputEmailtextarea::placeholder {
+        padding-left: 5%;
+        color: white;
     }
 
     .icon {
         display: flex;
-        border-radius: 70px;
-        border: 2px solid white;
-        margin: 5%;
-        height: 100%;
-        width: 50%;
-        justify-content:center;
-        align-items: center;
-        font-size: 1em;
+      
         text-align: center;
     }
 
@@ -593,7 +627,7 @@ Form {
     }
 
     .btnPrimero {
-        width: 80%
+        width: 90% !important;
     }
 
     .card {
@@ -601,10 +635,7 @@ Form {
         margin-bottom: 5%;
     }
 
-    footer {
-        margin-top: 35%;
-        padding-top: 50%;;
-    }
+  
     .imgFoo {
         width: 13%;
         height: 60%;
@@ -619,13 +650,7 @@ Form {
 
     .icon {
         display: flex;
-        border-radius: 50px;
-        border: 1px solid white;
-        margin: 5%;
-        height: 100%;
-        width: 50%;
-        justify-content:center;
-        align-items: center;
+       
         text-align: center;
 
     }
@@ -661,5 +686,7 @@ Form {
         text-align: center;
 
     }
+
+    
 
 }

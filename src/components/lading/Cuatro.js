@@ -12,10 +12,9 @@ const Cuatro = () => {
                     <br></br>
 
                     <center>
-                        <h5>¿Como Dormir a un bebé?</h5>
-
-                        <p className="pSegundo">The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
-                        <br></br>
+                        <div>
+                            <h2>¿Hasta que edad tendré que amamantar?</h2>
+                        </div>
 
                     </center>
                     <br></br>
@@ -31,10 +30,9 @@ const Cuatro = () => {
                     <br></br>
 
                     <center>
-                        <h5>¿Cómo Bañar a un bebé?</h5>
-
-                        <p className="pSegundo">2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
-                        <br></br>
+                        <div>
+                            <h2>¿Y ahora como le doy pecho?</h2>
+                        </div>
 
                     </center>
                     <br></br>
@@ -48,11 +46,10 @@ const Cuatro = () => {
                     <br></br>
 
                     <center>
-                        <h5>¿Será que esta enfermo?</h5>
-
-                        <p className="pSegundo">Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.</p>
-                        <br></br>
-
+                        <div>
+                            <h2>¿Por qué llora estará enfermo?</h2>
+                        </div>
+                        
                     </center>
                     <br></br>
                     <br></br>
@@ -67,11 +64,10 @@ const Cuatro = () => {
                     <br></br>
 
                     <center>
-                        <h5>¿Como alimentar a un bebé?</h5>
-
-                        <p className="pSegundo">Securely share files and folders with friends and colleagues for live collaboration. No email attachments required.</p>
-                        <br></br>
-
+                        <div>
+                            <h2>¿Qué cosas tenía que hacer hoy?</h2>
+                        </div>
+                       
                     </center>
                     <br></br>
                     <br></br>

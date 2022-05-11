@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { logoutAsync } from '../redux/actions/actionLogin';
 import * as React from 'react';
@@ -16,10 +16,22 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css'
+import { listperfilAsyn } from '../redux/actions/actionPerfil';
+import { useEffect } from 'react';
 
 
 
 const NavBarApp = () => {
+
+    useEffect(() => {
+        dispatch(listperfilAsyn())
+    }, [])
+
+    const { perfil } = useSelector(store => store.perfil)
+
+    let Fotoperfil = perfil[0]?.foto;
+
+
     const pages = ['Home', 'Tareas', 'Aprende', 'Entretenimiento'];
     const urls = ['/', '/tareas', '/aprendemas', '/entretenimiento'];
 
@@ -120,7 +132,7 @@ const NavBarApp = () => {
                             <Link to={urls[index]}
                                 key={page}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white',  display: 'block' }}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
                                 className="linkNav"
                             >
                                 {page}
@@ -130,8 +142,9 @@ const NavBarApp = () => {
 
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }} style={{backgroundColor:"grey", padding:'15%'}}>
+                                {/* <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /> */}
+                                <Avatar src={Fotoperfil}/>
                             </IconButton>
                         </Tooltip>
                         <Menu
@@ -151,8 +164,10 @@ const NavBarApp = () => {
                             onClose={handleCloseUserMenu}
                         >
 
-                            <MenuItem onClick={handleCloseUserMenu}>
-                                <Typography textAlign="center" onClick={logout}>Logout</Typography>
+                            <MenuItem onClick={handleCloseUserMenu} style={{ display: 'flex', flexDirection: 'column' }}>
+                                <Typography textAlign="center"><Link to="/perfil" style={{ textDecoration: 'none', color: 'black' }}>Perfil</Link></Typography><br></br>
+                                <Typography textAlign="center" onClick={logout}>Cerrar Sesión</Typography>
+
                             </MenuItem>
 
                         </Menu>
