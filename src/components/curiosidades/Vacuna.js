@@ -26,7 +26,7 @@ const Vacuna = () => {
     return (
         <>
             <br></br>
-            <Link to="/">
+            <Link to="/" className="linkatrasvacu">
                 <img src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651544520/babyhelp/hgq97eg6ho7ipy7zyiw3.png" width="7%" />
             </Link>
 
@@ -52,18 +52,11 @@ const Vacuna = () => {
                                         ))
                                     }
                                 </ListGroup>
-                                <br></br>
-                                <br></br>
-                                <br></br>
-                                <div className="divH3ComentCoVacu">
-                                    <h3>Comentarios</h3>
-                                </div>
-                                <AddComentariosVacunas />
                             </Col>
 
 
 
-                            <Col sm={8}>
+                            <Col sm={8} className="divVacu">
                                 <Tab.Content>
                                     {
                                         vacuna?.map((item, index) => (
@@ -86,11 +79,6 @@ const Vacuna = () => {
                                                                 <li key={index}>{v}</li>
                                                             ))
                                                         }
-
-                                                        {/* <li>{item?.vacunas[0]}</li>
-                                                        <li>{item?.vacunas[1]}</li>
-                                                        <li>{item?.vacunas[2]}</li>
-                                                        <li>{item?.vacunas[3]}</li> */}
                                                     </ul>
                                                 </div >
                                                 <br></br>
@@ -106,27 +94,12 @@ const Vacuna = () => {
                                                                 <li key={index}>{d}</li>
                                                             ))
                                                         }
-                                                        {/* <li>{item?.descricion2[0]}</li>
-                                                        <li>{item?.descricion2[1]}</li>
-                                                        <li>{item?.descricion2[2]}</li>
-                                                        <li>{item?.descricion2[3]}</li> */}
                                                     </ul>
                                                 </div >
 
                                                 <br></br>
                                                 <br></br>
 
-                                                {/* <div className="">
-                                                    <h3>{item?.nonbre3}</h3>
-                                                    <br></br>
-                                                    <p>{item?.parrafo3}</p>
-                                                    <ul>
-                                                        <li>{item?.descricion2[0]}</li>
-                                                        <li>{item?.descricion3[1]}</li>
-                                                        <li>{item?.descricion3[2]}</li>
-                                                        <li>{item?.descricion3[3]}</li>
-                                                    </ul>
-                                                </div > */}
                                             </Tab.Pane>
                                         ))
                                     }
@@ -135,6 +108,19 @@ const Vacuna = () => {
                             </Col>
                         </Row>
                     </Tab.Container>
+                </div>
+
+                <div>
+                    <Row>
+                        <Col sm={4}>
+                            <div className="divH3ComentCoVacu">
+                                <h3>Comentarios</h3>
+                            </div>
+                            <AddComentariosVacunas />
+                        </Col>
+                        <Col sm={8}>
+                        </Col>
+                    </Row>
                 </div>
             </div >
         </>

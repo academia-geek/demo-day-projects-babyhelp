@@ -13,6 +13,23 @@ const EntretenerBBVideos = () => {
             </Link>
 
             <div className="container-fluid conteVideos">
+
+                <div className="divlactatext">
+                    <center>
+                        <h3><strong>IMPORTANTE</strong></h3>
+                    </center>
+                    <br></br>
+                    <h4>
+                        Los bebés <strong>NO DEBEN interactuar con el móvil ni con ninguna otra pantalla al menos hasta los dos años.</strong> Y a partir de esa edad y hasta los cinco, cuanto menos accedan a estos dispositivos mejor y, en todo caso, nunca más de una hora al día. Esto es debido a la forma en que se entrena el cerebro a estas edades tempranas ante una frustración, un esfuerzo o una recompensa condiciona su conducta futura y su posterior capacidad de atención y aprendizaje.
+                        <br></br>
+                        <br></br>
+                        la Academia Americana de Pediatría (AAP) advertía a los padres de los peligros de usar la tecnología como “un chupete emocional”. “El móvil puede ser muy efectivo para mantener a los niños tranquilos y callados pero no debe ser la única forma en que aprendan a calmarse; los niños necesitan que se les enseñe cómo identificar y manejar las emociones fuertes”
+
+                    </h4>
+                </div>
+
+                <br></br>
+                <br></br>
                 <Row>
                     <Col sm={4}>
                         <ReactPlayer

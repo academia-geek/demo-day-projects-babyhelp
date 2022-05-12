@@ -34,7 +34,7 @@ const Login = () => {
             <div className="logoLogin">
                 <Link to="/lading"><img className="logoForm"
                     src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651009439/rz0t4rwlr53svcaf9vrj.png"
-                    width="25%"
+                    width="20%"
                     alt="logo"
                 /></Link>
             </div>
@@ -84,7 +84,7 @@ const Login = () => {
                                 <div className="divGoogle" onClick={() => handleLoginGoogle()}>
                                     <button type="submit" className="google-icon">
                                         <img className="iconGoogle"
-                                            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" width="10%"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" width="9%"
                                             alt="google button"
                                         />
                                         Ingresar con Google
@@ -94,7 +94,7 @@ const Login = () => {
                                 <div className="divFacebook" onClick={() => handleLoginFacebook()}>
                                     <button type="submit" className="google-icon">
                                         <img className="iconGoogle"
-                                            src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651013567/kvb6soktdnxk0ndq1tti.png" width="10%"
+                                            src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651013567/kvb6soktdnxk0ndq1tti.png" width="9%"
                                             alt="google button"
                                         />
                                         Ingresar con Facebook

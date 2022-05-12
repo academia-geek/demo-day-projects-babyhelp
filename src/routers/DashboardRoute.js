@@ -18,6 +18,7 @@ import EntretenerMamaVideos from '../components/entretenerBebe/EntretenerMamaVid
 import QueDeboSaber from '../components/curiosidades/QueDeboSaber';
 import Lactancia from '../components/curiosidades/Lactancia';
 import Perfil from '../components/Perfil';
+import PosicionesAlimentar from '../components/curiosidades/PosicionesAlimentar';
 
 
 
@@ -42,6 +43,7 @@ const DashboardRoute = () => {
                 <Route path="/queDeboSaber" element={<QueDeboSaber />} />
                 <Route path="/lactancia" element={<Lactancia />} />
                 <Route path="/perfil" element={<Perfil />} />
+                <Route path="/posicionAlimentar" element={<PosicionesAlimentar />} />
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
             <Footer />

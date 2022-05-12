@@ -52,7 +52,7 @@ export default function AddComentariosVacunas() {
     return (
         <div>
 
-            <div className="conteComenVacunas">
+            <div className="conteComen">
                 <ListarComentariosVacunas />
             </div>
 

@@ -28,11 +28,14 @@ const Destetar = () => {
                     <Col sm={9} >
                         <div className="divTextDestet">
 
-
-                            <p className="pDeste">Destetar es hacer que un niño pase de tomar el pecho a nutrirse de otras formas. El destete es un proceso que requiere paciencia y comprensión, tanto de tu parte como de parte del bebé, una madre podría verse condicionada porque debe regresar a trabajar, por su salud o la del bebé, o simplemente considere que llegó el momento adecuado.
+                            <h1>¿Cómo destetar a mi bebé?</h1>
+                            <br></br>
+                            <p className="pDeste">El destete es un proceso que requiere paciencia y comprensión, tanto de tu parte como de parte del bebé, una madre podría verse condicionada porque debe regresar a trabajar, por su salud o la del bebé, o simplemente considere que llegó el momento adecuado.
                                 <br></br>
                                 <br></br>
-                                Algunas madres amamantan a sus hijos durante más de un año (esto recibe el nombre de lactancia extendida). La lactancia extendida es una opción saludable y razonable para las madres y los niños que no están preparados para el destete. Cuando decidas destetar, es mejor que hagas que tu hijo tenga otra cosa en mente. Algunos niños dejan de mamar por sí mismos antes de lo que la madre tenía planeado y otros se resisten al destete cuando la madre está lista.</p>
+                                Algunas madres amamantan a sus hijos durante más de un año <strong>(esto recibe el 
+                                    nombre de lactancia extendida),</strong> es una opción saludable 
+                                    y razonable para las madres y los niños que no están preparados para el destete. Cuando decidas destetar, es mejor que hagas que tu hijo tenga otra cosa en mente. Algunos niños dejan de mamar por sí mismos antes de lo que la madre tenía planeado y otros se resisten al destete cuando la madre está lista.</p>
 
                             <div className="divContentButonModal">
                                 <>

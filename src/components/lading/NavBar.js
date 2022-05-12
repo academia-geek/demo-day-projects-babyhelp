@@ -57,14 +57,7 @@ const NavBar = () => {
                         sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                     >
                         <Link to="/" className="logo">
-
-                            <img
-                            src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651009439/rz0t4rwlr53svcaf9vrj.png"
-                            width="50%"
-                            className="d-inline-block align-top"
-                            alt="logo"
-                        />
-
+                            BABYHELP
                         </Link>
                     </Typography>
 

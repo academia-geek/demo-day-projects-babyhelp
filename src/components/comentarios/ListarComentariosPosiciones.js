@@ -11,35 +11,38 @@ import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { listcomentariosVacunasAsyn} from '../../redux/actions/actionComentariosVacunas';
+import { listcomentariosPosicionesAsyn} from '../../redux/actions/actionComentariosPosiciones';
+
+
+
 import '../../styles/carComentColico.css'
 
 
-export default function ListarComentariosVacunas() {
+export default function ListarComentariosPosiciones() {
 
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(listcomentariosVacunasAsyn())
+        dispatch(listcomentariosPosicionesAsyn())
     }, [])
 
-    const { comentariosVacunas } = useSelector(store => store.comentariosVacunas);
-    console.log(comentariosVacunas)
+    const { comentariosPosiciones } = useSelector(store => store.comentariosPosiciones);
+    console.log(comentariosPosiciones)
 
 
 
     return (
-        <div className="comentVacunas">
+        <div className="comentColicos">
             {
-                comentariosVacunas.map(c => (
-                    <Card sx={{ width: '90%' }} className="cardsColicoComent">
+                comentariosPosiciones.map(c => (
+                    <Card className="cardsColicoComent" style={{width:'90%'}}>
                         <CardHeader
                             avatar={
                                 <Avatar src="/broken-image.jpg" />
                             }
                             action={
                                 <IconButton aria-label="settings">
-                                    <MoreVertIcon />
+                                    {/* <MoreVertIcon /> */}
                                 </IconButton>
                             }
                             title={c.nombre}
@@ -53,10 +56,10 @@ export default function ListarComentariosVacunas() {
                         </CardContent>
                         <CardActions disableSpacing>
                             <IconButton aria-label="add to favorites">
-                                <ThumbUpIcon />
+                                <ThumbUpIcon/>
                             </IconButton>
                             <IconButton aria-label="share">
-                                <ThumbDownAltIcon />
+                                <ThumbDownAltIcon/>
                             </IconButton>
                         </CardActions>
                     </Card>

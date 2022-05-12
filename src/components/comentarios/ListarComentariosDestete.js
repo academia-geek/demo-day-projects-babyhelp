@@ -32,7 +32,7 @@ export default function ListarComentariosDestete() {
         <div className="comentDestete">
             {
                 comentariosDestete.map(c => (
-                    <Card className="cardsDesteteComent">
+                    <Card sx={{ width: '90%',marginBottom: '3% 0' }} className="cardsDesteteComent">
                         <CardHeader
                             avatar={
                                 <Avatar src="/broken-image.jpg" />

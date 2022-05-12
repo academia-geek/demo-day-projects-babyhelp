@@ -52,7 +52,7 @@ export default function AddComentariosColicos() {
     return (
         <div>
 
-            <div className="conteComenColicos">
+            <div className="conteComen">
                 <ListarComentariosColicos />
             </div>
 

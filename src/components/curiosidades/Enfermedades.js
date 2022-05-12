@@ -39,13 +39,14 @@ const Enfermedades = () => {
 
             <div className="container-fluid " style={{ margin: '0 auto', display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'center', flexDirection: 'column' }}>
 
-                <h6 style={{ fontSize: '1.7rem', letterSpacing: '1.2px', fontWeight: '500' }}>
-                    Algunas enfermedades son muy comunes durante las primeras semanas posteriores al nacimiento, esto es debido a que tu bebé no tiene sufientes defensas que ayuden a combatir los virus y bacterias que existen en el nuevo entorno que lo rodea. <br></br>
+                <div style={{ width: '98%', fontSize:'1.4rem', padding: '3% 6%', backgroundColor: 'rgb(221, 113, 113)', boxShadow: '4px 4px 10px rgb(0 0 0 / 80%), -4px -4px 10px rgb(255 255 255 / 40%), inset -4px -4px 10px rgb(0 0 0 / 40%), inset 4px 4px 10px rgb(255 255 255 / 40%)', margin: '0 auto', borderRadius: '8px', color: 'rgb(0, 0, 0)'}}>
+                <h2>Enfermedades Comunes</h2>
+                   <br></br>
+                   <p> Algunas <strong>enfermedades son muy comunes</strong> durante las primeras semanas posteriores al nacimiento, esto es debido a que tu bebé no tiene sufientes defensas que ayuden a combatir los virus y bacterias que existen en el nuevo entorno que lo rodea. <br></br>
                     <br></br>
                     <strong>Presiona las imagenes aquí abajo</strong>, las cuales te brindarán información de algunas enfermedades comunes, sus causas, tratamientos y prevención que te ayudarán a guiarte en distintas situaciones.
-                    <br></br>
-                    <br></br>
-                </h6>
+                    </p>
+                </div>
 
 
                 <br></br>

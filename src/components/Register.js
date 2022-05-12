@@ -23,7 +23,7 @@ const Registro = () => {
             <div className="logoRegistro">
                 <Link to="/lading"><img className="logoForm"
                     src="https://res.cloudinary.com/dhu8kck7f/image/upload/v1651009439/rz0t4rwlr53svcaf9vrj.png"
-                    width="25%"
+                    width="20%"
                     alt=""
                 /></Link>
             </div>

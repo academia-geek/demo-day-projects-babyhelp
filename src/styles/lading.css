@@ -194,7 +194,7 @@ h5 {
     margin: 0 auto;
 }
 
-.card {
+/* .card {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -208,6 +208,18 @@ h5 {
     background-color: hsl(0, 0%, 83%);
     box-shadow: 10px 10px 13px 0px rgb(186, 186, 186);
 
+} */
+
+.cardscoment {
+    height: 350px !important;
+    margin: 5% 0 !important;
+    padding: 1% !important;
+    display: flex !important;
+    align-items: center !important;
+    border: none !important;
+    border-radius: 4px !important;
+    background-color: hsl(0, 0%, 83%) !important;
+    box-shadow: 10px 10px 13px 0px rgb(162, 189, 231)
 }
 
 
@@ -254,7 +266,7 @@ footer {
 .colFooterUno {
     display: flex;
     justify-content: center;
-    
+
 }
 
 .colFooterUno p {
@@ -264,7 +276,7 @@ footer {
 .colFooterDos {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .colFooterDos p {
@@ -410,12 +422,6 @@ Form {
 }
 
 @media (max-width: 1200px) {
-    .card {
-        margin: 0 auto;
-        margin-bottom: 5%;
-    }
-
-
 
     footer {
         margin-top: 10%;
@@ -425,22 +431,27 @@ Form {
     .icon {
         border-radius: 50px;
         height: 30%;
-        
+
         text-align: center;
+    }
+
+    .cardscoment {
+        height: 400px !important;
+
     }
 
 }
 
-@media (max-width: 924px) {
-    .card {
-        margin: 0 auto;
-        margin-bottom: 5%;
+@media (max-width: 968px) {
+    .cardscoment {
+        height: 400px !important;
+
     }
 
 
     footer {
         margin-top: 10%;
-        
+
     }
 
 
@@ -458,6 +469,14 @@ Form {
 }
 
 @media (max-width: 768px) {
+
+    .cardscoment {
+        height: 400px !important;
+    }
+
+    .img {
+        width: 5%;
+    }
 
     .logoNavDentro {
         width: 85%;
@@ -512,12 +531,6 @@ Form {
         margin: 0 auto;
     }
 
-    .card {
-        margin: 0 auto;
-        margin-bottom: 5%;
-    }
-
-
 
     .conteFooter {
         flex-direction: column;
@@ -540,12 +553,12 @@ Form {
     .colFooterDos,
     .colFooterCinco {
         width: 100%;
-        
+
     }
 
     .colFooterTres {
         width: 90%;
-  
+
     }
 
     .colFooterCinco {
@@ -613,9 +626,30 @@ Form {
 
 }
 
+@media (max-width: 699px) {
+    .cardscoment {
+        height: 600px !important;
+    }
+    .cardscoment img{
+        width: 100%;
+    }
+}
+
 @media (max-width: 568px) {
     .primero {
         width: 90%;
+    }
+
+    .cardscoment img{
+        width: 20%;
+    }
+
+    .cardscoment{
+        height: 350px !important;
+    }
+
+    .card-body {
+        flex: 0;
     }
 
     .segundo {
@@ -624,11 +658,6 @@ Form {
 
     .btnPrimero {
         width: 90% !important;
-    }
-
-    .card {
-        margin: 0 auto;
-        margin-bottom: 5%;
     }
 
 

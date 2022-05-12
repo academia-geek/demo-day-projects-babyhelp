@@ -44,9 +44,9 @@ label{
 
 .btnLogin{
     border: none;
-    padding: 2%;
+    padding: 1.5%;
     margin: 7% 0 3% 0;
-    width: 100%;
+    width: 50%;
     background-color: #ff9fe2;
     border-radius: 7px;
     font-size: 1.3em;
@@ -88,15 +88,25 @@ label{
     margin-right: 5%;
 }
 
+.btnsAuth{
+    width: 100%;
+    display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin: 0 auto;
+     text-align: center;
+}
+
 .google-icon{
     border: none;
-    width: 100%;
+    width: 50%;
     background-color: #b4b4b4;
     padding: 2%;
     border-radius: 9px;
     color: rgb(0, 0, 0);
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 600;
+    text-align: center;
 }
 
 .google-icon:hover{

@@ -5,6 +5,20 @@ export const typesAcciones = {
     deleteItem: 'deleteItem',
 }
 
+export const typesLactancia = {
+    addLactancia: 'addLactancia',
+    listLactancia: 'listLactancia',
+    editarLactancia: 'editarLactancia',
+    deleteLactancia: 'deleteLactancia',
+}
+
+export const typesPosiciones = {
+    addPosiciones: 'addPosiciones',
+    listPosiciones: 'listPosiciones',
+    editarPosiciones: 'editarPosiciones',
+    deletePosiciones: 'deletePosiciones',
+}
+
 export const typesPerfil = {
     addperfil: 'addperfil',
     listperfil: 'listperfil',

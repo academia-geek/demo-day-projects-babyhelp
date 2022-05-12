@@ -13,6 +13,8 @@ import { comentariosColicosReducers } from "../reducers/comentariosColicosReduce
 import { comentariosVacunasReducers } from "../reducers/comentariosVacunasReducers";
 import { comentariosDesteteReducers } from "../reducers/comentariosDesteteReducers";
 import { perfilReducers } from "../reducers/perfilReducers";
+import { comentariosLactanciaReducers } from "../reducers/comentariosLactanciaReducers";
+import { comentariosPosicionesReducers } from "../reducers/comentariosPosicionesReducers";
 
 
 
@@ -33,6 +35,8 @@ const reducers = combineReducers({
     comentariosVacunas: comentariosVacunasReducers,
     comentariosDestete: comentariosDesteteReducers,
     perfil: perfilReducers,
+    comentariosLactancia: comentariosLactanciaReducers,
+    comentariosPosiciones: comentariosPosicionesReducers,
 });
 
 

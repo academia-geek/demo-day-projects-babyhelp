@@ -55,3 +55,12 @@
     justify-content: end;
 }
 
+@media (max-width: 768px){
+    .divVacu{
+        margin-top: 10%!important;
+    }
+
+    .linkatrasvacu img{
+        width: 17%;
+    }
+}

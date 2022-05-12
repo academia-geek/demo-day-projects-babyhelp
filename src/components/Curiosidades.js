@@ -22,7 +22,7 @@ const Curiosidades = () => {
                 {
                     aprende.map(o => (
                         <Accordion.Item eventKey={o}>
-                            <Accordion.Header>{o.nombre}</Accordion.Header>
+                            <Accordion.Header><strong>{o.nombre}</strong></Accordion.Header>
                             <Accordion.Body>
                                 <Row className="divInternoAcordeon">
                                     <Col sm={5}>

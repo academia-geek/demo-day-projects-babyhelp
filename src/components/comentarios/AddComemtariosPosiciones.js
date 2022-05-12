@@ -4,14 +4,14 @@ import Stack from '@mui/material/Stack';
 import { Form } from 'react-bootstrap';
 import { useForm } from '../../Hooks/useForm';
 import { useDispatch, useSelector } from 'react-redux';
-import { addcomentariosDesteteAsync} from '../../redux/actions/actionComentariosDestete';
+import { addcomentariosPosicionesAsync} from '../../redux/actions/actionComentariosPosiciones';
 import uuid from 'react-uuid';
 import '../../styles/Blogs.css'
-import ListarComentariosDestete from './ListarComentariosDestete';
-import { useEffect } from 'react';
+import ListarComentariosPosiciones from './ListarComentariosPosiciones';
 import { listperfilAsyn } from '../../redux/actions/actionPerfil';
+import { useEffect } from 'react';
 
-export default function AddComentariosDestete() {
+export default function AddComentariosPosiciones() {
 
     const dispatch = useDispatch()
 
@@ -26,7 +26,7 @@ export default function AddComentariosDestete() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        dispatch(addcomentariosDesteteAsync({
+        dispatch(addcomentariosPosicionesAsync({
             ...formValue,
             nombre: perfill,
             fecha: output,
@@ -53,7 +53,7 @@ export default function AddComentariosDestete() {
         <div>
 
             <div className="conteComen">
-                <ListarComentariosDestete />
+                <ListarComentariosPosiciones />
             </div>
 
             <br></br>
@@ -61,7 +61,7 @@ export default function AddComentariosDestete() {
 
 
             <div className="divStackdivStackColico">
-                <Stack direction="row" spacing={2} className="divStackDestete">
+                <Stack direction="row" spacing={2} className="divStackColico">
                     <Avatar src="/broken-image.jpg" />
 
                     <Form onSubmit={handleSubmit} className="formComen">

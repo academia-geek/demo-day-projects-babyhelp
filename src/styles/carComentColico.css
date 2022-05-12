@@ -19,3 +19,11 @@
     max-width: 90%;
     margin: 2% 0;
 }
+
+@media (max-width: 768px){
+    .comentColicos{
+        
+        align-items: center;
+        
+    }
+}

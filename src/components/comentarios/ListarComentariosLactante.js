@@ -8,38 +8,37 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { listcomentariosVacunasAsyn} from '../../redux/actions/actionComentariosVacunas';
+import { listcomentariosLactanciaAsyn} from '../../redux/actions/actionComentariosLactancia';
 import '../../styles/carComentColico.css'
 
 
-export default function ListarComentariosVacunas() {
+export default function ListarComentariosLactancia() {
 
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(listcomentariosVacunasAsyn())
+        dispatch(listcomentariosLactanciaAsyn())
     }, [])
 
-    const { comentariosVacunas } = useSelector(store => store.comentariosVacunas);
-    console.log(comentariosVacunas)
+    const { comentariosLactancia } = useSelector(store => store.comentariosLactancia);
+    console.log(comentariosLactancia)
 
 
 
     return (
-        <div className="comentVacunas">
+        <div className="comentColicos">
             {
-                comentariosVacunas.map(c => (
-                    <Card sx={{ width: '90%' }} className="cardsColicoComent">
+                comentariosLactancia.map(c => (
+                    <Card style={{width:'90%',marginBottom: '3% 0'}} className="cardsDesteteComent">
                         <CardHeader
                             avatar={
                                 <Avatar src="/broken-image.jpg" />
                             }
                             action={
                                 <IconButton aria-label="settings">
-                                    <MoreVertIcon />
+                                    {/* <MoreVertIcon /> */}
                                 </IconButton>
                             }
                             title={c.nombre}
@@ -53,10 +52,10 @@ export default function ListarComentariosVacunas() {
                         </CardContent>
                         <CardActions disableSpacing>
                             <IconButton aria-label="add to favorites">
-                                <ThumbUpIcon />
+                                <ThumbUpIcon/>
                             </IconButton>
                             <IconButton aria-label="share">
-                                <ThumbDownAltIcon />
+                                <ThumbDownAltIcon/>
                             </IconButton>
                         </CardActions>
                     </Card>
