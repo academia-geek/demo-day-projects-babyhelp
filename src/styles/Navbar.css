@@ -1,7 +1,7 @@
 .css-19r6kue-MuiContainer-root {
-    padding-left: 44px;
-    padding-right: 44px;
-    background-color: hsl(210, 64%, 81%);
+    padding-left: 44px!important;
+    padding-right: 44px!important;
+    background-color: hsl(210, 64%, 81%)!important;
     padding: 2% 4%!important
     
 }

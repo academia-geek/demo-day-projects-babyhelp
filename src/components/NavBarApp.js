@@ -64,7 +64,7 @@ const NavBarApp = () => {
 
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" style={{backgroundColor:'hsl(210, 64%, 81%)', paddingRight: '44px', paddingLeft: '44px', padding: '2%'}}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography
